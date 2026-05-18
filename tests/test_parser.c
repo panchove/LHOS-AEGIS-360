@@ -1,18 +1,24 @@
 // test_parser.c – QA para FSM parser (Sprint 01, ODIN)
-#include "src/core/parser.h"
+#include "parser.h"
 #include <assert.h>
 #include <stdio.h>
 
+#include "message_bus.h"
 static int g_dispatch = 0;
-void mydispatch(pool_buf_t* buf) {
+void bus_handler(pool_buf_t* buf) {
     ++g_dispatch;
     assert(buf && buf->len > 0);
     pool_release(buf);
 }
+void mydispatch(pool_buf_t* buf) {
+    // Ownership transfer Parser → Bus
+    message_bus_publish(buf);
+}
 
 void test_parser_simple() {
     assert(parser_init(mydispatch) == 0);
-    pool_init();
+    pool_init(); message_bus_init();
+    message_bus_subscribe(bus_handler);
     g_dispatch = 0;
     // Trama válida: [0xAA, 0x02, 0x12, 0x34, checksum]
     uint8_t frame[] = {0xAA, 0x02, 0x12, 0x34, 0xAA+0x02+0x12+0x34};
@@ -20,6 +26,8 @@ void test_parser_simple() {
     assert(g_dispatch == 1);
     assert(parser_error_count() == 0);
     assert(parser_dispatch_count() == 1);
+    assert(message_bus_publish_count() == 1);
+    assert(message_bus_dispatch_count() == 1);
 }
 
 void test_parser_crc_fail() {

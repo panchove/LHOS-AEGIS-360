@@ -1,6 +1,6 @@
 // test_pool.c – Unit test para heapless pool (Sprint 01, QA)
 // Usar: Unity+ESPIDF o cualquier runner C
-#include "src/core/pool.h"
+#include "pool.h"
 #include <assert.h>
 #include <stdio.h>
 
