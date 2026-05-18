@@ -1,39 +1,51 @@
-# BUILD SYSTEM
+# BUILD SYSTEM y Workflows ESP-IDF
 
-## Política de Stack y Librerías (Espressif/ESP-IDF)
-- Prohibido el uso de cualquier librería Arduino y de terceros fuera de los componentes oficiales Espressif.
-- Solo se permite ESP-IDF v5.5.3 como framework, base de compilación y runtime.
-- Tiempo de sistema debe sincronizarse obligatoriamente con HASTA 2 servidores NTP.
-- PRIORIDAD: El uso de servidores NTP enviados por ConfIoT solo será efectivo a partir del Sprint de integración con ConfIoT. Hasta ese punto, únicamente se autorizan y utilizan los internos: 'pool.ntp.org' y 'time.google.com'. La UI debe mostrar la fuente activa ('NTP/Default'). Cuando se active ConfIoT sólo se usan máximo 2 entregados.
-- Si llegan más de 2 desde ConfIoT solo se usan los 2 primeros.
-- Fallback automático entre los NTP; si ambos fallan, dejar log crítico y alertar en UI.
-- Formato global de fecha/hora: UTC ISO-8601. Monitor/UI muestra 'AAAA-MM-DD HH:MM UTC (PAIS-ISO)'.
-- Si no es posible determinar el país por red local/RTC/GPS, debe llamarse a una API pública (como myip.com o ipapi.co) para detectar y mostrar el código país ISO.
+## 1. Comandos principales (ESP-IDF)
 
-- Cualquier excepción o uso de dependencia externa requiere autorización y documentación previa por Arquitectura.
+- **Build:**
+  ```sh
+  idf.py build
+  ```
+- **Flash (sube el binario; reemplaza el puerto por el correcto):**
+  ```sh
+  idf.py -p /dev/ttyUSB0 flash
+  ```
+- **Monitor (ver logs serial):**
+  ```sh
+  idf.py -p /dev/ttyUSB0 monitor
+  ```
+- **Build + Flash + Monitor, todo seguido:**
+  ```sh
+  idf.py -p /dev/ttyUSB0 flash monitor
+  ```
+- **Clean/erase:**
+  ```sh
+  idf.py fullclean
+  idf.py erase-flash
+  ```
 
-## C++17 Core Policy
-- Core/runtime: C++17 estricto, heapless, sin exceptions ni RTTI.
-- Permitido: enum class, constexpr, templates, interfaces POD, std::array (sin heap), RAII determinista.
-- Prohibido: exceptions, RTTI, std::function, std::vector/map/set en core, new/delete arbitrario, ownership ambiguo.
-- C sólo en glue ESP-IDF y drivers/HAL.
+## 2. Estructura mínima de componentes
+- Cada módulo funcional debe tener su propio CMakeLists.txt (ver ejemplos en src/ y tests/)
+- Los tests deben vivir en tests/ y ser registrados con `idf_component_register`
 
-## Test Integration (ESP-IDF/Unity)
-- All tests deben definirse como components ESP-IDF usando `idf_component_register`.
-- Manual `add_executable` targets are prohibited.
-- Cada test suite en `tests/<suite>` con `CMakeLists.txt` usando `idf_component_register`.
-- Include Unity en `REQUIRES`.
-- Build y test using:
-  - `idf.py fullclean`
-  - `make test`
+## 3. Tests
+- Usar Unity framework (ESP-IDF standard)
+- Comando típico:
+  ```sh
+  idf.py -T <test_name> test
+  ```
+- Puede ejecutarse en CI usando runners oficiales Espressif
+
+## 4. Consideraciones
+- Nunca incluir ni depender de Arduino, PlatformIO u otros stacks en código productivo.
+- Toda persistencia y logging debe ser sobre LittleFS (ver políticas en ISO12207_GUIDELINES.md, README.md)
+
+## 5. Troubleshooting
+- Si tienes problemas de permisos en el puerto USB:
+  ```sh
+  sudo usermod -a -G dialout $(whoami) && sudo udevadm control --reload-rules
+  ```
 
 ---
 
-## Filesystem/Storage Policy
-- Únicamente LittleFS está permitido como filesystem persistente en QA, producción y pruebas.
-- Está prohibido el uso de SPIFFS, FATfs u otros filesystems, salvo para almacenamiento temporal volátil explícitamente documentado.
-- Justificación: SPIFFS tiene alto riesgo de corrupción y ha sido reemplazado en la plataforma ESP-IDF/Layrz.
-
-## Core/Runtime Heapless Policy (Sprint 03)
-- Core runtime components (BootOrchestrator, ServiceRegistry, DependencyGraph, EventBus, TaskRegistry, HealthRegistry, WatchdogRegistry, Logger core) son estrictamente heapless.
-- Forbidden constructs deben detectarse mediante check-contract script.
+Para detalles avanzados, ver docs oficiales Espressif: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/
