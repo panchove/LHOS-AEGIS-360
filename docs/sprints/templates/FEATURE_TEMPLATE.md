@@ -24,9 +24,13 @@ Explica en una frase qué resuelve/mejora y para qué usuario o sistema es relev
 - [ ] Tests
 - [ ] Endpoints/API/documentación Swagger
 - [ ] QA validado
+- [ ] Build (idf.py build) probado en hardware/runner
+- [ ] Flash (idf.py -p <puerto> flash) probado y documentado
+- [ ] Monitor (idf.py -p <puerto> monitor) ejecutado, logs visibles
 
 ## 7. Acceptance Criteria y QA
-- [ ] Criterios para que PO/QA acepte la feature como DONE
+- [ ] Criterios para que PO/QA acepte la feature como DONE (incluye evidence práctica: build/flash/monitor OK en ESP-IDF, logs ser auditables, screenshots/log artefacts preferidos)
+
 
 ---
 
