@@ -1,0 +1,62 @@
+# ESP-IDF / PlatformIO / CMake
+build/
+*.elf
+*.bin
+*.hex
+*.map
+*.dmp
+*.gcda
+*.gcno
+*.gcov
+*.o
+*.a
+*.S
+CMakeCache.txt
+CMakeFiles/
+cmake-build-*/
+project_description.json
+sdkconfig
+sdkconfig.old
+sdkconfig.*.bak
+*.pyc
+__pycache__/
+.pio/
+*.log
+*.tmp
+*.swp
+*.swo
+*.orig
+*.bak
+*.DS_Store
+
+# VSCode / JetBrains / otros IDE
+.vscode/
+*.code-workspace
+.idea/
+
+# Python QA/dev utils
+.pytest_cache/
+.coverage
+*.egg-info/
+.env
+
+# QA artefacts
+dump/
+logs/
+*.dump
+*.core
+*.out
+
+# General temp
+*.tmp
+*~
+
+# NO ignorar docs/, legacy_reference/, QA/
+!docs/
+!legacy_reference/
+!QA/
+!*.md
+!*.sh
+
+# Permitir scripts y plantillas de QA
+!QA/check-contract.sh

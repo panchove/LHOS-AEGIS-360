@@ -1,18 +1,39 @@
-#include "unity.h"
-#include "pool.h"
+// test_pool.c – Unit test para heapless pool (Sprint 01, QA)
+// Usar: Unity+ESPIDF o cualquier runner C
+#include "src/core/pool.h"
+#include <assert.h>
+#include <stdio.h>
 
-void test_pool_alloc_release(void) {
-  TEST_ASSERT_EQUAL(0, pool_init());
-  unsigned before = pool_free_count();
-  pool_buf_t* b = pool_alloc();
-  TEST_ASSERT_NOT_NULL(b);
-  TEST_ASSERT_EQUAL(before - 1, pool_free_count());
-  pool_release(b);
-  TEST_ASSERT_EQUAL(before, pool_free_count());
+void test_init_and_alloc_release() {
+    assert(pool_init() == 0);
+    size_t n = pool_total_count();
+    pool_buf_t* bufs[32] = {0};
+    size_t i, count = 0;
+    for (i = 0; i < n; ++i) {
+        bufs[i] = pool_alloc();
+        assert(bufs[i] != 0 && bufs[i]->magic == 0xDEADBEEF);
+        ++count;
+    }
+    assert(pool_free_count() == 0);
+    assert(pool_alloc() == 0); // debe estar agotado
+    for (i = 0; i < count; ++i) pool_release(bufs[i]);
+    assert(pool_free_count() == n);
 }
 
-void app_main(void) {
-  UNITY_BEGIN();
-  RUN_TEST(test_pool_alloc_release);
-  UNITY_END();
+void test_double_release_safe() {
+    pool_init();
+    pool_buf_t* buf = pool_alloc();
+    assert(buf);
+    pool_release(buf);
+    pool_release(buf); // debe ser idempotente y seguro
+    assert(pool_free_count() == pool_total_count());
+}
+
+int main() {
+    puts("[QA] pool: test_init_and_alloc_release");
+    test_init_and_alloc_release();
+    puts("[QA] pool: test_double_release_safe");
+    test_double_release_safe();
+    puts("[OK] pool heapless QA tests PASSED");
+    return 0;
 }
