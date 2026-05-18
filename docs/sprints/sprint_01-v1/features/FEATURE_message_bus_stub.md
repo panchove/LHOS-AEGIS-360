@@ -15,9 +15,14 @@ Stub inicial del message bus con ownership contract, publish/subscribe dummy y v
 
 ## 4. Checklist
 - [ ] message_bus.h/.c, tests
+- [ ] Build (idf.py build) probado en hardware/runner
+- [ ] Flash (idf.py -p <puerto> flash) probado y documentado
+- [ ] Monitor (idf.py -p <puerto> monitor) ejecutado, logs visibles
 
 ## 5. Acceptance/QA
 - [ ] Ownership policy audible y contrato visible
+- [ ] DONE: build, flash, monitor visible en hardware/runner (adjuntar evidencia/log)
+
 
 ---
 

@@ -24,6 +24,9 @@ Implementa un administrador heapless de buffers fijos, compatible con policy Lit
 - [ ] pool.h/.c, tests, doc integrada
 - [ ] QA/check-contract
 - [ ] Demo de stress y logs
+- [ ] Build (idf.py build) probado en hardware/runner
+- [ ] Flash (idf.py -p <puerto> flash) probado y documentado
+- [ ] Monitor (idf.py -p <puerto> monitor) ejecutado, logs visibles
 
 ## 7. Acceptance criteria / QA
 - [ ] Stress: sin memory leaks, uso conforme ownership contract

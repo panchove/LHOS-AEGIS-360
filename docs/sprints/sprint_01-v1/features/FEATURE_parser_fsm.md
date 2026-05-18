@@ -22,9 +22,14 @@ Parser de tramas/paquetes binarios multi-protocolo, validación CRC, FSM con own
 ## 6. Checklist entregables
 - [ ] parser.h/.c, tests, QA
 - [ ] Documentation
+- [ ] Build (idf.py build) probado en hardware/runner
+- [ ] Flash (idf.py -p <puerto> flash) probado y documentado
+- [ ] Monitor (idf.py -p <puerto> monitor) ejecutado, logs visibles
 
 ## 7. Acceptance criteria / QA
 - [ ] Test vector: rejects corrompidos, CRC fail, entrega ok
+- [ ] DONE: build, flash, monitor visible en hardware/runner (adjuntar evidencia/log)
+
 
 ---
 

@@ -17,9 +17,14 @@ Implementación pura C17 del contrato CRC16-CCITT para framing y verificación Q
 
 ## 5. Checklist entregables
 - [ ] crc16.h/.c, tests, vector legacy y moderno
+- [ ] Build (idf.py build) probado en hardware/runner
+- [ ] Flash (idf.py -p <puerto> flash) probado y documentado
+- [ ] Monitor (idf.py -p <puerto> monitor) ejecutado, logs visibles
 
 ## 6. Acceptance/QA
 - [ ] Match con vectors conocidos (legados y estándar)
+- [ ] DONE: build, flash, monitor visible en hardware/runner (adjuntar evidencia/log)
+
 
 ---
 
