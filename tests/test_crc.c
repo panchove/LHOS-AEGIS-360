@@ -1,16 +1,31 @@
-#include "unity.h"
+// test_crc.c – Test unitario y compatibilidad legacy/modern (Sprint 01, ODIN)
 #include "crc16.h"
+#include <assert.h>
+#include <stdio.h>
 
-void test_crc_known_vector(void) {
-  const uint8_t data[] = { 'A','B','C','1','2','3' };
-  uint16_t c = crc16_ccitt(data, sizeof(data));
-  // known crc for "ABC123" using ccitt 0xFFFF is implementation dependent;
-  // we check non-zero to assert function runs.
-  TEST_ASSERT_NOT_EQUAL(0, c);
+void test_standard_vector() {
+    // CRC16-CCITT (0x1021, init=0xFFFF): "123456789" -> 0x29B1
+    static const uint8_t vec[] = { '1','2','3','4','5','6','7','8','9' };
+    uint16_t result = crc16_ccitt(vec, 9);
+    assert(result == 0x29B1);
 }
-
-void app_main(void) {
-  UNITY_BEGIN();
-  RUN_TEST(test_crc_known_vector);
-  UNITY_END();
+void test_empty() {
+    assert(crc16_ccitt(0,0) == 0xFFFF);
+}
+void test_legacy_vector() {
+    // Ejemplo típico: {0xAA, 0x02, 0x12, 0x34} (vector ficticio)
+    static const uint8_t legacy[] = {0xAA,0x02,0x12,0x34};
+    uint16_t r = crc16_ccitt(legacy, 4);
+    // El valor exacto depende del framing; solo documenta para consistencia
+    printf("legacy CRC16(AA 02 12 34): 0x%04X\n", (unsigned)r);
+}
+int main() {
+    printf("[QA] crc16: standard vector\n");
+    test_standard_vector();
+    printf("[QA] crc16: empty\n");
+    test_empty();
+    printf("[QA] crc16: legacy vector\n");
+    test_legacy_vector();
+    puts("[OK] CRC16 QA tests PASSED");
+    return 0;
 }
