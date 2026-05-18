@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Fix git ownership
+        run: |
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+          git config --global --add safe.directory /__w/LHOS-AEGIS-360/LHOS-AEGIS-360
       - name: Run contract check
         run: bash QA/check-contract.sh
 
@@ -19,6 +23,10 @@ jobs:
     container: espressif/idf:latest
     steps:
       - uses: actions/checkout@v4
+      - name: Fix git ownership
+        run: |
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+          git config --global --add safe.directory /__w/LHOS-AEGIS-360/LHOS-AEGIS-360
       - name: Build firmware
         run: |
           . $IDF_PATH/export.sh
@@ -34,6 +42,10 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v4
+      - name: Fix git ownership
+        run: |
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+          git config --global --add safe.directory /__w/LHOS-AEGIS-360/LHOS-AEGIS-360
       - name: Run Unity tests
         run: |
           . $IDF_PATH/export.sh
