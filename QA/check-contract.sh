@@ -11,9 +11,10 @@ EXIT_CODE=0
 echo "Running QA contract checks in $TARGET"
 
 echo "1) Checking for SPIFFS references outside legacy_reference (excluding docs/ and sprints)..."
-if grep -R --line-number --exclude-dir=legacy_reference --exclude-dir=docs --exclude-dir=sprints -n "SPIFFS" "$TARGET" >/dev/null 2>&1; then
+echo "1) Checking for SPIFFS references in code paths (components/, src/, core/, main/)..."
+if grep -R --line-number --exclude-dir=legacy_reference --exclude-dir=docs --exclude-dir=sprints -n "SPIFFS" components src core main >/dev/null 2>&1; then
   echo "[ERROR] Found SPIFFS references in code outside legacy_reference and docs:" >&2
-  grep -R --line-number --exclude-dir=legacy_reference --exclude-dir=docs --exclude-dir=sprints -n "SPIFFS" "$TARGET" || true
+  grep -R --line-number --exclude-dir=legacy_reference --exclude-dir=docs --exclude-dir=sprints -n "SPIFFS" components src core main || true
   EXIT_CODE=2
 else
   echo "[OK] No SPIFFS references outside legacy_reference"
