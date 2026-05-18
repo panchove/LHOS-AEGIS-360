@@ -1,0 +1,2 @@
+source /home/panchove/Projects/LHOS-AEGIS-360/build/gdbinit/symbols
+source /home/panchove/Projects/LHOS-AEGIS-360/build/gdbinit/connect

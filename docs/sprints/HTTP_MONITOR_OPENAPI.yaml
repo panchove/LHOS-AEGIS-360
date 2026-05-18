@@ -1,0 +1,68 @@
+openapi: 3.0.3
+info:
+  title: LHOS-AEGIS-360 HTTP Monitor API
+  description: |
+    API REST para diagnóstico, monitoreo y gestión en runtime. Cumple OpenAPI 3.0. Toda persistencia (descarga) es en GZIP propietario.
+
+    CRÍTICA: El endpoint `/status` entrega el arreglo `tasks`: una lista todas las tareas supervisadas, incluyendo: nombre, estado (`ejecutando`, `bloqueada`, `timeout`, `desconocida`), delta último ping, timestamp, y si está en alerta WDT. El estado bruto del WDT también se expone (`ok`, `timeout`, `alerta`).
+
+    Todas las alertas de WDT, violaciones y logs de tasks deben auditarse y persistirse en la blackbox. La UI debe visualizar estos estados en tiempo real para cualquier usuario autenticado y ofrecer detalles (hover/tooltips/lista reciente).
+
+(...resto igual...)
+
+paths:
+  /status:
+    get:
+      summary: Estado general del sistema
+      description: |
+        Devuelve health, uptime, versión, estado de integración con periféricos críticos, PROTOCOLO LAYRZ ACTIVO ("lzv"), y ESTADO GLOBAL del Watchdog (campo `wdt` : `ok`/`alerta`/`timeout`) y el listado completo de tasks supervisadas y su estado (`tasks` array).
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Resumen en JSON
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  sta:
+                    type: string
+                    description: Estado breve o código
+                  upt:
+                    type: integer
+                    description: Uptime en segundos
+                  ver:
+                    type: string
+                    description: Versión de firmware
+                  lzv:
+                    type: number
+                    description: 'Versión activa del protocolo Layrz (1, 2.0, 2.5)'
+                  per:
+                    type: object
+                    description: Estado integración periféricos
+                  wdt:
+                    type: string
+                    description: Estado Watchdog global (`ok`, `alerta`, `timeout`)
+                  tasks:
+                    type: array
+                    description: Listado de tareas supervisadas
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        state:
+                          type: string
+                          enum: [running, blocked, timeout, unknown]
+                        last_heartbeat:
+                          type: string
+                          format: date-time
+                        delta_sec:
+                          type: number
+                        alert:
+                          type: boolean
+                          description: Si la tarea está bajo alerta/timeout WDT
+        '401':
+          description: No autorizado
+(...resto igual...)
