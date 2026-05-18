@@ -13,7 +13,7 @@ Explica en una frase qué resuelve/mejora y para qué usuario o sistema es relev
 - [ ] Cada requisito debe ser medible, auditable y tener un campo de validación QA.
 
 ## 4. Requisitos no funcionales/arquitectónicos
-- [ ] Seguridad, performance, persistencia/logs, internacionalización, etc.
+- [ ] Seguridad, performance, persistencia/logs (solo LittleFS permitido, SPIFFS prohibido en QA y producción), internacionalización, etc.
 
 ## 5. Arquitectura / diseño
 - [ ] Resumen de flujo de datos, dependencias, restricciones técnicas.

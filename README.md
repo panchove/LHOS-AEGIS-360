@@ -16,10 +16,18 @@
 - [legacy_reference/](legacy_reference/) (SOLO PARA REFERENCIA DE CONTRATOS, JAMÁS CÓDIGO)
 
 ## Directrices rápidas para contribución y uso
-- Lee primero [docs/sprints/ISO12207_GUIDELINES.md](docs/sprints/ISO12207_GUIDELINES.md) y HANDOF.md para política de independencia y control de licencias.
+- Lee primero [docs/sprints/ISO12207_GUIDELINES.md](docs/sprints/ISO12207_GUIDELINES.md) y HANDOFF.md para política de independencia y control de licencias.
 - NO REUTILIZAR código de `legacy_reference`, sólo extraer contratos/diagramas requeridos.
 - Toda contribución (feature, fix, refactor) debe estar trazada en documentación contractual y cumplir requisitos ISO/QA.
+- Persistencia: sólo LittleFS está autorizado. Cualquier uso de SPIFFS, incluso parcial o legado, está prohibido por QA/política técnica y debe reportarse/migrarse. legacy_reference contiene solo ejemplos/documentos históricos y jamás debe guiar diseño/implementación moderna en cuanto a filesystem.
 
 ---
+
+### QA rápida de compliance filesystem
+
+Para asegurar el cumplimiento contractual, ejecuta `bash QA/check-contract.sh` en el root del repositorio antes de cualquier entrega, merge o QA formal:
+
+- El script falla si detecta uso indebido de SPIFFS fuera de carpetas legacy_reference/ o referencias aceptadas por advertencia/prohibición.
+- Toda persistencia debe ser sobre LittleFS, cualquier excepción genera rechazo automático en QA.
 
 **Para cualquier uso o derivación:** verifica licencias, dependencias y sigue las normativas legales documentadas.

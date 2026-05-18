@@ -33,6 +33,93 @@ Fin de guía.
 
 ---
 
+## Anexo: Habilitación/deshabilitación dinámica y persistente de servicios (por ConfIoT o Monitor)
+
+### Requisitos contractuales
+- Los servicios (tasks, handlers, APIs, drivers, etc.) deben poder activarse o desactivarse dinámicamente vía:
+    - Interfaz Monitor (API HTTP/UI: switches por servicio, endpoint /api/v1/svc o similar).
+    - Plataforma remota ConfIoT (push/sync del estado deseado).
+- Algunos servicios son **indeactivables** por arquitectura ("core services"), nunca deben poder deshabilitarse ni manual, ni remota, ni por corrupción/config. Ejemplos: FreeRTOS tick/WDT, heap/system checker, recovery protector, API mínima, config starter/base, y compresión GZIP (GZIP es crítico, nunca puede desactivarse porque asegura la integridad y minimiza el uso de almacenamiento).
+  - En backend, cualquier intento de alterar un core service es ignorado/logueado como warning y restaurado a enabled=1 automáticamente.
+  - En UI/API/ConfIoT, estos servicios aparecen como "always-on" (toggle deshabilitado o no expuestos).
+- La habilitación/deshabilitación del resto debe:
+    - Persistir obligatoriamente en almacenamiento no volátil (NVS, archivo gzip, flash) y restaurarse tras cada reinicio.
+    - Responder inmediatamente a los cambios (sin reboot salvo fuerza mayor).
+    - Registrar cada cambio (fuente, timestamp) en logs gzip y eventos de monitor.
+- El contrato de estado debe usar formato bitmask/mapa (keys cortas, ej: {"crc":1,"log":0,...}), donde core services no están expuestos o quedan readonly.
+- Cualquier conflicto/confusión se resuelve por política:
+    - ConfIoT tiene prioridad salvo override explícito desde Monitor.
+    - Los cambios de estado deben ser auditable y reversibles vía logs.
+- QA debe cubrir casos de persistencia, toggling concurrente, corrupción de NVS, intentos sobre core services, y correctos fallbacks seguros.
+
+**Ejemplo de workflow:**
+1. GET /api/v1/svc → retorna estado actual de los servicios habilitados/inhabilitados.
+2. POST /api/v1/svc body: {"svc_logging":1} → habilita servicio, persiste, responde estado global actualizado.
+3. Reboot/read arranca sólo los servicios activos.
+
+Esto es de cumplimiento obligatorio a partir de Layrz v2 y recomendado como feature base desde Layrz v1.5.
+
+---
+
+## Anexo: Asignación de tareas a Core 0 y Core 1 (ESP32, ESP-IDF 5.5.3)
+
+### Reglas de asignación contractuales
+
+- **Core 0 (PRO CPU):**
+    - Tareas críticas del sistema, FreeRTOS tick, WDT, WiFi/BLE stack, ISR principales, monitoreo, switching Layrz, drivers, NTP, GPIO/I2C/SPI.
+    - Todo módulo cuyo fallo bloquea o corrompe el sistema debe fijarse a Core 0 usando xTaskCreatePinnedToCore(..., 0).
+- **Core 1 (APP CPU):**
+    - Lógica de usuario/Layrz, parsing, bus, handlers de aplicación, logging/compression (GZIP), tareas QA/background, dumps o persistencia masiva.
+    - Tareas de procesamiento que no requieran latencia mínima, puedan ser preemptadas o retrasadas, o deban descargarse del core de sistema.
+- **Política técnica:**
+    - Se exige declarar explícitamente la asignación de cada task relevante en la documentación técnica y el encabezado del módulo.
+    - Todo ISR o driver que afecte la estabilidad va a Core 0; ningún handler/API/log puede compartir core con sistema salvo excepción justificada/auditada.
+
+**Ejemplo (C, ESP-IDF):**
+```c
+// Sistema crítico
+xTaskCreatePinnedToCore(sys_monitor_task, "sys_mon", 4096, NULL, 5, NULL, 0);
+// Lógica de usuario/log/QA
+xTaskCreatePinnedToCore(gzip_logging_task, "gzlog", 8192, NULL, 3, NULL, 1);
+```
+
+Ver referencias oficiales en:
+- https://docs.espressif.com/projects/esp-idf/en/v5.5.3/esp32/api-guides/freertos-smp.html
+- https://docs.espressif.com/projects/esp-idf/en/v5.5.3/esp32/api-reference/system/freertos.html
+
+---
+
+## Anexo: Política de Uso de PSRAM vs SRAM (ESP32, ESP-IDF 5.5.3)
+
+### Criterios y recomendaciones oficiales para uso de PSRAM y SRAM
+
+- **SRAM (interna):** Siempre usar para funciones/críticos de tiempo real, parser, CRC16, control MessageBus, FSMs, ISR, variables globales y estructuras de control lógico-temporal donde la latencia y la determinismo son imprescindibles (heap_caps_malloc con MALLOC_CAP_INTERNAL/MALLOC_CAP_8BIT). Nunca usar PSRAM para ISR/alta prioridad.
+- **PSRAM (externa):** Usar solo para:
+    - Buffers grandes, logs, históricos QA, dumps API, compresión/decompresión GZIP, snapshots, data de uso no crítico en tiempo real.
+    - Asignar memoria PSRAM sólo mediante heap_caps_malloc(MALLOC_CAP_SPIRAM) y documentar fallback seguro a SRAM donde sea posible.
+    - Todo uso de PSRAM debe pasar pruebas QA extendidas, integridad del heap y benchmarks documentados de performance y corrupción. Si se detecta corrupción o lentitud inaceptable, fallback obligado a SRAM y registro de issue/bug.
+- **Buenas prácticas:**
+    - Prohibido usar PSRAM para rutinas/calculos críticos o variables accedidas en ISR/tasks sensibles.
+    - Auditar y documentar cada transición relevante a PSRAM, asociando referencia contractual, motivo técnico y benchmark.
+    - Integrar controles automáticos de heap_caps_check_integrity_all() tras operaciones clave con PSRAM.
+    - Configurar, revisar y auditar los Kconfig/build flags ESP-IDF (CONFIG_SPIRAM_* y similares) en cada despliegue/handoff.
+    - Mantener evidencia traceable de QA/fallback en logs y pilot_results.
+- **Referencias oficiales:**
+    - https://docs.espressif.com/projects/esp-idf/en/v5.5.3/esp32/api-reference/system/mem_alloc.html
+    - https://docs.espressif.com/projects/esp-idf/en/v5.5.3/esp32/api-guides/external-ram.html
+- **Resumen ejecutivo:** Usar siempre SRAM para misión crítica; PSRAM solo para almacenamiento temporal/masivo, con fallback y QA obligatorio.
+
+---
+
+## Anexo: Política de Persistencia, Filesystem y Almacenamiento
+- Toda persistencia y almacenamiento no volátil debe realizarse ÚNICAMENTE sobre LittleFS.
+- Queda prohibido el uso de SPIFFS en cualquier componente productivo, QA o ejemplo nuevo.
+- Justificación: SPIFFS presenta riesgos altos de corrupción de datos; LittleFS es obligatorio para asegurar robustez, integridad, y compatibilidad futura con ESP-IDF y Layrz.
+- Ejemplos y fragmentos legacy que mencionen SPIFFS son solo referencia histórica y deben migrarse o ignorarse en el diseño/código nuevos.
+- QA: cualquier feature/configuración debe invalidarse si emplea o inicializa SPIFFS, aunque sea por error.
+
+---
+
 ## Anexo: Política de Independencia del Legacy y Control de Contaminación Técnica (ISO/IEC 12207)
 
 ### Licencia y restricciones de reutilización heredadas

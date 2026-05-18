@@ -14,7 +14,7 @@ Principales hallazgos (funcionales)
 - Comandos remotos: LayrzProtocol interpreta comandos (<Ac> / <Ao>/<Ar> handshake) y ejecuta handlers (reboot, get_config, set_config, fota, factory_reset, gpio, pwm, serial passthrough, io extender commands, etc.).
 - Serial/RS485: SerialMonitor ofrece parsers y marshalling para múltiples dispositivos (HPC168, DN23E08), construcción de tramas, CRC16, y manejo de semáforos para acceso compartido al bus RS485.
 - BLE: subsistema con scanner y peripheral (NUS) que publica paquetes decodificados; existe un conjunto de decoders por modelo (ELA_*, LYWSD03MMC, TELTONIKA_EYE, etc.).
-- Settings: UnifiedSettingsStorage guarda JSON (SPIFFS) en PSRAM durante parseo; settings deserializados a hubSettings global leído por módulos.
+- Settings: UnifiedSettingsStorage (legacy) guardaba JSON en SPIFFS y PSRAM durante parseo; settings deserializados a hubSettings global leído por módulos. NOTA: En la arquitectura actual SPIFFS está prohibido. Toda persistencia debe migrarse y operar únicamente sobre LittleFS; cualquier referencia a SPIFFS aquí es sólo legado/documental y NO debe replicarse en features modernos.
 
 Principales hallazgos (no funcionales y operativos)
 - PSRAM (MALLOC_CAP_SPIRAM) se usa para buffers grandes y de larga vida (message payloads, media, settings JSON). Se hacen allocations con heap_caps_malloc y liberaciones explícitas.

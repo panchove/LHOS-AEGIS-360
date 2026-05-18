@@ -29,6 +29,11 @@
 
 ---
 
+## Filesystem/Storage Policy
+- Únicamente LittleFS está permitido como filesystem persistente en QA, producción y pruebas.
+- Está prohibido el uso de SPIFFS, FATfs u otros filesystems, salvo para almacenamiento temporal volátil explícitamente documentado.
+- Justificación: SPIFFS tiene alto riesgo de corrupción y ha sido reemplazado en la plataforma ESP-IDF/Layrz.
+
 ## Core/Runtime Heapless Policy (Sprint 03)
 - Core runtime components (BootOrchestrator, ServiceRegistry, DependencyGraph, EventBus, TaskRegistry, HealthRegistry, WatchdogRegistry, Logger core) son estrictamente heapless.
 - Forbidden constructs deben detectarse mediante check-contract script.
