@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main, feature/*]
+  pull_request:
+    branches: [main]
+
+jobs:
+  contract-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run contract check
+        run: bash QA/check-contract.sh
+
+  build:
+    runs-on: ubuntu-latest
+    container: espressif/idf:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build firmware
+        run: |
+          . $IDF_PATH/export.sh
+          idf.py build
+      - name: Build tests
+        run: |
+          . $IDF_PATH/export.sh
+          idf.py -T all build
+
+  test:
+    runs-on: ubuntu-latest
+    container: espressif/idf:latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Unity tests
+        run: |
+          . $IDF_PATH/export.sh
+          idf.py -T all test
