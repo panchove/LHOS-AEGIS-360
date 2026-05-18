@@ -1,3 +1,10 @@
+# ---
+owner: ODIN
+last_reviewed: 2026-05-18
+status: draft
+doc_id: PROTOCOL_CORE
+# ---
+
 # LHOS-AEGIS-360 — Layrz Protocol Core (Sprint 00)
 
 ---

@@ -16,12 +16,18 @@ typedef struct slot_s {
 
 static slot_t g_slots[POOL_SLOT_COUNT];
 
+#include <esp_log.h> // Añadir logging
+
 int pool_init(void) {
+  ESP_LOGI("pool", "Inicializando pool con %u slots de %u bytes (%.1f KB total)", POOL_SLOT_COUNT, POOL_SLOT_SIZE, (POOL_SLOT_COUNT*POOL_SLOT_SIZE)/1024.0);
   for (unsigned i = 0; i < POOL_SLOT_COUNT; ++i) {
     atomic_init(&g_slots[i].locked, 0u);
     g_slots[i].id = i;
+    size_t free_caps = heap_caps_get_free_size(MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT);
+    ESP_LOGI("pool", "Slot %u: free SPIRAM=%u", i, (unsigned)free_caps);
     g_slots[i].buf = heap_caps_malloc(POOL_SLOT_SIZE, MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT);
     if (!g_slots[i].buf) {
+      ESP_LOGE("pool", "Fallo malloc slot %u (necesita %u bytes), SPIRAM disponible=%u. Corrige PSRAM/config/particion.", i, POOL_SLOT_SIZE, (unsigned)heap_caps_get_free_size(MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT));
       // free previously allocated
       for (unsigned j = 0; j < i; ++j) {
         heap_caps_free(g_slots[j].buf);
@@ -31,8 +37,10 @@ int pool_init(void) {
     }
     memset(g_slots[i].buf, 0, POOL_SLOT_SIZE);
   }
+  ESP_LOGI("pool", "pool_init OK");
   return 0;
 }
+
 
 pool_buf_t* pool_alloc(void) {
   for (unsigned i = 0; i < POOL_SLOT_COUNT; ++i) {

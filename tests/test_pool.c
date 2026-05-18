@@ -1,5 +1,5 @@
 // test_pool.c – Unit test para heapless pool (Sprint 01, QA)
-// Usar: Unity+ESPIDF o cualquier runner C
+// Ejecutable como test directo
 #include "pool.h"
 #include <assert.h>
 #include <stdio.h>
@@ -29,7 +29,7 @@ void test_double_release_safe() {
     assert(pool_free_count() == pool_total_count());
 }
 
-int main() {
+int test_pool_main(void) {
     puts("[QA] pool: test_init_and_alloc_release");
     test_init_and_alloc_release();
     puts("[QA] pool: test_double_release_safe");

@@ -9,6 +9,7 @@
 - **Flash (sube el binario; reemplaza el puerto por el correcto):**
   ```sh
   idf.py -p /dev/ttyUSB0 flash
+  # El puerto de referencia oficial es /dev/ttyUSB0. Si difiere en tu entorno valida con `ls /dev/ttyUSB*`
   ```
 - **Monitor (ver logs serial):**
   ```sh

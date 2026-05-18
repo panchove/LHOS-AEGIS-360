@@ -2,7 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "../crc/include/crc16.h"
+#include <stdbool.h>
+#include "../crc/include/crc16_esp.h"
 
 // Simple parser: collects until ';' (delimiter). On terminator, validates optional
 // CRC marker of last 4 hex chars (if present) and dispatches buffer.

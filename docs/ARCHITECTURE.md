@@ -1,3 +1,10 @@
+# ---
+owner: ODIN
+last_reviewed: 2026-05-18
+status: draft
+doc_id: ARCHITECTURE
+# ---
+
 # LHOS-AEGIS-360 — Architecture Baseline (Reliability/Recovery expansion)
 
 ---

@@ -9,5 +9,6 @@
 - Test app link must validate for compliance (make test).
 
 ## Running Tests
-- Use `make test` para disparar `idf.py build && idf.py test` si aplica.
-- Si `idf.py test` no está disponible, `make test` al menos chequea que los tests compilan.
+- Use the unified ESP-IDF commands for building and running tests.
+- Recommended command for CI/local: `idf.py build && idf.py -T all test`
+- If `idf.py -T all test` is not available in a particular component, run `idf.py build` and the component-level tests separately using `idf.py -T <test_name> test`.

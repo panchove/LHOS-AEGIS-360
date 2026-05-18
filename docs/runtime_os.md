@@ -1,8 +1,10 @@
-# Runtime OS Specification (FreeRTOS) — Core C17
+# Runtime OS Specification (FreeRTOS) — Core C++17
+
+[CORREGIDO] El Core/runtime se implementa en C++17 (sin exceptions/RTTI). C se reserva para ISR/HAL/boot glue.
 
 Resumen
 - RTOS: FreeRTOS (usado a través de ESP-IDF) sobre ESP32-S3.
-- Implementación: componentes CORE en C17; capas superiores en C++17 sin exceptions/RTTI.
+- Implementación: componentes CORE en C++17; capas superiores en C++17 sin exceptions/RTTI.
 - Filosofía: determinismo, ownership explícito, evitar malloc/new en hot-paths.
 
 Objetivos operativos

@@ -1,1 +1,1 @@
-idf_component_register(SRCS "pool.c" INCLUDE_DIRS "include")
+idf_component_register(SRCS "pool.cpp" INCLUDE_DIRS "include")

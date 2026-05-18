@@ -1,5 +1,5 @@
 // test_crc.c – Test unitario y compatibilidad legacy/modern (Sprint 01, ODIN)
-#include "crc16.h"
+#include "crc16_esp.h"
 #include <assert.h>
 #include <stdio.h>
 

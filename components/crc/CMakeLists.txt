@@ -1,1 +1,1 @@
-idf_component_register(SRCS "crc16.c" INCLUDE_DIRS "include")
+idf_component_register(SRCS "crc16.cpp" INCLUDE_DIRS "include")

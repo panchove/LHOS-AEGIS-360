@@ -1,7 +1,7 @@
 #pragma once
 #include <stddef.h>
 #include <stdint.h>
-#include "../pool/include/pool.h"
+#include "pool.h"
 
 typedef void (*parser_dispatch_cb_t)(pool_buf_t* buf);
 

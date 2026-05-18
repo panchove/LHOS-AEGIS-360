@@ -1,17 +1,23 @@
-# Implementation Plan — Core en C17, capas superiores en C++17
+# Implementation Plan — Core en C++17 (decisión: CORE en C++17)
 
-Objetivo: definir interfaces y contratos para la re-implementación limpia del firmware tomando requisitos de legacy_reference. El CORE (componentes críticos: pool, parser, message bus minimal, transport glue) se implementará en C17. Las capas superiores (servicios, decoders, tests y utilidades) podrán usar C++17 sin exceptions/RTTI.
+[CORREGIDO] Decisión de arquitectura: el Core/runtime se implementará en C++17 (sin exceptions, sin RTTI). C queda reservado exclusivamente para ISR/HAL/boot glue y drivers estrictamente necesarios.
+
+Objetivo: definir interfaces y contratos para la re-implementación limpia del firmware tomando requisitos de legacy_reference. El CORE (componentes críticos: pool, parser, message bus minimal, transport glue) se implementará en C++17. Las capas superiores (servicios, decoders, tests y utilidades) podrán usar C++17 sin exceptions/RTTI.
 
 1) Contratos generales
-- Ownership: pool alloc → devuelve pool_buf_t*; la llamada obtiene la propiedad. La transferencia de ownership se efectúa explícitamente al MessageBus mediante MessageBus_publish(buf) (C API). Quien reciba ownership debe llamar pool_release(buf) cuando termine.
-- Heap policy: buffers grandes almacenados en PSRAM. El código core puede usar heap_caps_malloc con MALLOC_CAP_SPIRAM para reservas controladas durante init; en runtime evitar malloc/free repetidos.
-- Sin exceptions/RTTI, no std::vector/strings en core. C structs y arrays estáticos o PSRAM-backed.
+- Ownership (DECISIÓN UNIFICADA):
+	- Parser: crea el buffer (`pool_alloc`) y tras validar (CRC ok) llama `dispatch_cb(buf)`.
+	- MessageBus: *toma ownership* cuando se llama `MessageBus_publish(buf)`. MessageBus es responsable de encolar, retransmitir y finalmente llamar `pool_release(buf)` cuando ya no sea necesario.
+	- Dispatcher y Handlers: *no toman ownership*; solo leen el buffer. El único componente autorizado para liberar es el MessageBus/BlackBox.
 
-2) Componentes core (C17)
-- components/pool: pool_init(), pool_alloc(), pool_release(), pool_stats(). Implementación lock-free con atomic_flag por slot (fast). Buffers en PSRAM.
-- components/crc: crc16_ccitt() pura en C, con tabla (fast) y test vectors.
-- components/parser: parser_init(dispatch_cb), parser_feed(byte), parser_feed_buf(ptr,len). Parser FSM assemble bytes into pool buffer, detect delimiter ';' y validar CRC16 si el final incluye 4 hex digits. Si ok, llama dispatch_cb(pool_buf_t*). En fallo, libera buffer.
-- components/message_bus (esqueleto): C API que acepta ownership. (Se implementará después.)
+- Heap policy: buffers grandes almacenados en PSRAM. El código core en C++17 debe usar pools y allocators controlados; sólo permitir allocaciones controladas durante init.
+- Sin exceptions/RTTI en el core; usar RAII y wrappers ligeros para ownership. Evitar `std::vector`/`std::string` en hot-paths; preferir span-like views y buffers PSRAM-backed.
+
+2) Componentes core (C++17)
+- components/pool: `pool_init()`, `pool_alloc()`, `pool_release()`, `pool_stats()`. Implementación en C++17 con wrappers RAII y estructuras POD para las slots; buffers en PSRAM.
+- components/crc: `crc16_ccitt()` como función `constexpr`/referencia en C++ con tabla precomputada y vectores de test.
+- components/parser: `parser_init(dispatch_cb)`, `parser_feed_byte`, `parser_feed_buf`. FSM en C++17 que ensambla bytes en buffers del pool; al completar y validar CRC llama `dispatch_cb(pool_buf_t*)` transfiriendo ownership al MessageBus.
+- components/message_bus: interfaz C++ (con bindings C si es necesario) que acepta ownership y es responsable de liberar buffers (`pool_release`) tras envío o persistencia en BlackBox.
 
 3) Capas superiores (C++17)
 - services/layrz_protocol: command dispatcher (thin), handlers, interactúa con MessageBus C API.
@@ -24,8 +30,9 @@ Objetivo: definir interfaces y contratos para la re-implementación limpia del f
 - tools/check_contracts.sh: grep estático para prohibidos (malloc/new/delete, std::vector) en archivos core/.
 
 6) Next actions (implementación inmediata)
-- Añadir componentes: pool (C), crc (C), parser (C) con tests unitarios mínimos.
-- Integrar CMakeLists por componente para que `cmake` los detecte.
+- Añadir componentes: pool (C++17), crc (C++17), parser (C++17) con tests unitarios mínimos.
+- Implementar bindings C sólo donde sea necesario (ISR/drivers/boot glue).
+- Integrar CMakeLists por componente para que `idf.py`/CMake los detecte.
 
 APIs propuestas (simplificadas)
 
