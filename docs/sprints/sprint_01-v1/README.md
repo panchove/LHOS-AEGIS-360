@@ -1,26 +1,26 @@
-# Sprint 1-v1 – Layrz v1 Initial
+# Sprint 01 – Estado
 
-**Fechas:** Del [aaaa-mm-dd] al [aaaa-mm-dd]
+## Estado: IN-PROGRESS (BLOQUEADO por QA práctico)
 
-## Objetivos
-- Buffers de pool y QA funcional básica
-- Integración de CRC16 ROM
-- Parser FSM versión 1, funcionalidad mínima
-- Gating y pruebas Layrz v1 (solo features version 1)
+### Cumplimientos:
+- Todos los features están desarrollados y validados en entorno host (gcc/tests unitarios OK).
+- Checklist contractual, ownership, heapless y modularidad completados.
+- QA de integración funcional, diseño y pipeline PASARON.
 
-## Entregables
-- Documentación relevante y contratos core v1
-- Prototipo funcional v1 CRC16/parsing
-- Tests pool/QA
-- Tag: [sprint_01-v1-done]
+### Bloqueo/crítico:
+- Falta evidencia de ejecución práctica en hardware ESP32 o CI real:
+  - `idf.py build`
+  - `idf.py -p <puerto> flash`
+  - `idf.py -p <puerto> monitor`
+- Ninguna entrega puede pasar a estado DONE ni abrir Sprint 02 hasta que esto sea subsanado.
 
-## Checklist de cierre
-- [ ] README checklist completado
-- [ ] Tag pushado
-- [ ] Entregables versionados
-- [ ] QA y test/evidencia guardados
-- [ ] Handoff/documental OK
+### Acción requerida
+- Realizar pruebas reales en hardware o CI, capturar evidencia/logs y referenciarla aquí.
+- Solo entonces mover a "DONE".
+
+### Responsables/Checklist QA:
+- QA o devs/designados con acceso a hardware deben ejecutar el ciclo completo y subir evidencia clara (print/screenshot/log monitor/CI approved).
 
 ---
 
-Contratos/requisitos cubiertos: ver SPRING_MATRIX.md, docs/contracts/core, features/ en esta carpeta
+Instrumentación, CI, detalles y logs deben quedar adjuntos para cierre contractual. No avanzar siguiente Sprint hasta desbloquear este paso.
