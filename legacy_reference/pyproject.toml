@@ -1,0 +1,62 @@
+[project]
+name = "layrz-hubone1.2-base-firmware"
+version = "0.1.0"
+description = "Layerz HubOne 1.2 Base Firmware"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+  "esptool>=4.8.1",
+  "platformio>=6.1.18",
+  "python-dotenv>=1.0.1",
+  "layrz-app-deployment>=6.3.8,<7.0.12",
+]
+
+[tool.uv.sources]
+#layrz-app-deployment = { path = "../layrz-app-deployment", editable = true }
+layrz-app-deployment = { index = "layrz-private" }
+
+[[tool.uv.index]]
+name = "layrz-private"
+url = "https://api.layrz.com/pypi/simple"
+explicit = true
+
+[tool.ruff]
+indent-width = 2
+line-length = 120
+
+exclude = [
+  "**/templates/*",
+  ".venv",
+]
+
+[tool.ruff.lint]
+ignore = [
+  "F401", # Unused import
+  "E701", # Multiple statements on one line
+  "TD003", # Missing issue link
+  "ANN401", # Allow Any
+  "T201", # print() found
+]
+
+select = [
+  "I", # isort
+  "E", "W", # pycodestyle
+  "F", # pyflakes
+  "B", # flakes8-bugbear
+  "TD", # flake8-todo
+  "DJ", # flake8-django
+  "DTZ", # flake8-datetimez
+  "T20", # flake8-print # En un futuro
+  "PYI", # flake8-pyi
+  "ANN", # flake8-annotations
+]
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+docstring-code-format = true
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9.6",
+]

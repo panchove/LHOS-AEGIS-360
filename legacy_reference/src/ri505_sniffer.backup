@@ -1,0 +1,162 @@
+#include <Arduino.h>
+#include <HardwareSerial.h>
+#include <freertos/FreeRTOS.h>
+#include <freertos/task.h>
+#include <esp_heap_caps.h>
+#include <modules/definitions/DefinitionsLayrzHub.h>
+
+namespace {
+
+HardwareSerial rs232_1(1);
+HardwareSerial rs232_2(2);
+SemaphoreHandle_t serialOutMutex = nullptr;
+
+struct SerialTaskConfig {
+    HardwareSerial* port;
+    uint8_t portId;
+    size_t bufferSize;
+};
+
+bool containsCommandByte(const uint8_t* data, size_t len) {
+    for (size_t i = 0; i < len; i++) {
+        if (data[i] == 0x02 || data[i] == 0x03) {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool isLatinPrintable(uint8_t value) {
+    return (value >= 0x20 && value <= 0x7E) || value >= 0xA0;
+}
+
+void emitRenderedLine(uint8_t portId, const uint8_t* data, size_t len) {
+    if (!serialOutMutex) {
+        return;
+    }
+    xSemaphoreTake(serialOutMutex, portMAX_DELAY);
+
+    unsigned long ts = millis();
+    const char* prefix = (portId == 1) ? "SGC_MOBILE" : "RI505";
+    Serial0.printf("%s-%lu-", prefix, ts);
+    if (len > 0 && containsCommandByte(data, len)) {
+        for (size_t i = 0; i < len; i++) {
+            if (i > 0) {
+                Serial0.print(' ');
+            }
+            Serial0.printf("%02X", data[i]);
+        }
+    } else {
+        for (size_t i = 0; i < len; i++) {
+            uint8_t value = data[i];
+            if (value == 0x00) {
+                Serial0.print("00");
+            } else if (isLatinPrintable(value)) {
+                Serial0.write(value);
+            } else {
+                Serial0.printf("%02X", value);
+            }
+        }
+    }
+    Serial0.println();
+
+    xSemaphoreGive(serialOutMutex);
+}
+
+void flushLine(uint8_t portId, uint8_t* buffer, size_t& len, bool& overflow) {
+    if (!overflow && len > 0) {
+        emitRenderedLine(portId, buffer, len);
+    }
+    len = 0;
+    overflow = false;
+}
+
+void serialReaderTask(void* pvParameters) {
+    auto* cfg = static_cast<SerialTaskConfig*>(pvParameters);
+    uint8_t* lineBuf = static_cast<uint8_t*>(
+        heap_caps_malloc(cfg->bufferSize, MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT));
+    if (!lineBuf) {
+        if (serialOutMutex) {
+            xSemaphoreTake(serialOutMutex, portMAX_DELAY);
+            Serial0.printf("RS232%u-0-ERROR: failed to allocate line buffer in PSRAM\n", cfg->portId);
+            xSemaphoreGive(serialOutMutex);
+        }
+        vTaskDelete(nullptr);
+        return;
+    }
+
+    size_t idx = 0;
+    bool overflow = false;
+    bool insideFrame = false;
+    for (;;) {
+        while (cfg->port->available()) {
+            int value = cfg->port->read();
+            if (value < 0) {
+                break;
+            }
+            uint8_t b = static_cast<uint8_t>(value);
+            if (b == 0x02) {
+                insideFrame = true;
+            }
+
+            if (!insideFrame && (b == '\n' || b == '\r')) {
+                flushLine(cfg->portId, lineBuf, idx, overflow);
+                continue;
+            }
+
+            if (!overflow) {
+                if (idx + 1 < cfg->bufferSize) {
+                    lineBuf[idx++] = b;
+                } else {
+                    overflow = true;
+                }
+            }
+
+            if (b == 0x03 && insideFrame) {
+                insideFrame = false;
+            }
+
+            if (!overflow && idx >= 4 &&
+                lineBuf[idx - 4] == '<' &&
+                lineBuf[idx - 3] == 'L' &&
+                lineBuf[idx - 2] == 'F' &&
+                lineBuf[idx - 1] == '>') {
+                idx -= 4;
+                if (insideFrame) {
+                    if (idx + 1 < cfg->bufferSize) {
+                        lineBuf[idx++] = '\n';
+                    } else {
+                        overflow = true;
+                    }
+                } else {
+                    flushLine(cfg->portId, lineBuf, idx, overflow);
+                }
+            }
+        }
+
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+}
+
+} // namespace
+
+void setup() {
+    Serial0.begin(115200);
+
+    rs232_1.setRxBufferSize(2048);
+    rs232_2.setRxBufferSize(2048);
+    rs232_1.begin(115200, SERIAL_8N1, RS232_1_RX, RS232_1_TX, false);
+    rs232_2.begin(115200, SERIAL_8N1, RS232_2_RX, RS232_2_TX, false);
+
+    serialOutMutex = xSemaphoreCreateMutex();
+
+    static SerialTaskConfig cfg1{&rs232_1, 1, RS232_1_BUFFER_SIZE};
+    static SerialTaskConfig cfg2{&rs232_2, 2, RS232_2_BUFFER_SIZE};
+
+    xTaskCreate(serialReaderTask, "rs232_1_reader", 4096, &cfg1, 1, nullptr);
+    xTaskCreate(serialReaderTask, "rs232_2_reader", 4096, &cfg2, 1, nullptr);
+}
+
+void loop() {
+    vTaskDelay(pdMS_TO_TICKS(1000));
+}

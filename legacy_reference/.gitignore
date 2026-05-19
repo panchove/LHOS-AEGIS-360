@@ -1,0 +1,12 @@
+build
+firmware
+.env
+.venv
+firmware.bin
+.pio
+.vscode
+#include log files
+logs/*
+
+output.log
+.claude

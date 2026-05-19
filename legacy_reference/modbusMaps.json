@@ -1,0 +1,973 @@
+{
+  "d": [
+    {
+      "id": 1,
+      "m": "fafeicy",
+      "md": "WSFG-06",
+      "d": "Signal Generator",
+      "p": "wsfg",
+      "hr": [
+        {
+          "l": "voltage.peak.v",
+          "ao": 0,
+          "bl": 16,
+          "is": false,
+          "m": 0.1,
+          "o": 0,
+          "dt": "int",
+          "min": 1,
+          "max": 24,
+          "u": "V"
+        },
+        {
+          "l": "frequency",
+          "ao": 1,
+          "bl": 32,
+          "is": false,
+          "m": 0.001,
+          "o": 0,
+          "dt": "int",
+          "min": 1,
+          "max": 150,
+          "u": "kHz"
+        },
+        {
+          "l": "duty.cycle",
+          "ao": 3,
+          "bl": 16,
+          "is": false,
+          "m": 0.1,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 100,
+          "u": "%"
+        },
+        {
+          "l": "pulse.start.delay.time",
+          "ao": 4,
+          "bl": 16,
+          "is": false,
+          "m": 0.001,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 6,
+          "u": "s"
+        },
+        {
+          "l": "pulse.high.level.time",
+          "ao": 5,
+          "bl": 16,
+          "is": false,
+          "m": 0.001,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 6,
+          "u": "s"
+        },
+        {
+          "l": "pulse.low.level.time",
+          "ao": 6,
+          "bl": 16,
+          "is": false,
+          "m": 0.001,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 6,
+          "u": "s"
+        },
+        {
+          "l": "number.of.pulses",
+          "ao": 7,
+          "bl": 16,
+          "is": false,
+          "m": 1,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 60000,
+          "u": "pulses"
+        },
+        {
+          "l": "voltage.output",
+          "ao": 8,
+          "bl": 16,
+          "is": false,
+          "m": 0.01,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 10,
+          "u": "V"
+        },
+        {
+          "l": "current.output",
+          "ao": 9,
+          "bl": 16,
+          "is": false,
+          "m": 0.01,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 20,
+          "u": "mA"
+        },
+        {
+          "l": "sine.wave.frequency",
+          "ao": 10,
+          "bl": 16,
+          "is": false,
+          "m": 1,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 1000,
+          "u": "Hz"
+        },
+        {
+          "l": "mode",
+          "ao": 11,
+          "bl": 16,
+          "is": false,
+          "m": 1,
+          "o": 0,
+          "dt": "int",
+          "min": 1,
+          "max": 4,
+          "u": "",
+          "st": [
+            {
+              "n": "PWM",
+              "v": 1
+            },
+            {
+              "n": "Pulses",
+              "v": 2
+            },
+            {
+              "n": "Voltage/Current Source",
+              "v": 3
+            },
+            {
+              "n": "Sine Wave",
+              "v": 4
+            }
+          ]
+        },
+        {
+          "l": "baud.rate",
+          "ao": 12,
+          "bl": 16,
+          "is_little_endian": false,
+          "is": false,
+          "m": 1,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 5,
+          "u": "",
+          "st": [
+            {
+              "n": "4800",
+              "v": 0
+            },
+            {
+              "n": "9600",
+              "v": 1
+            },
+            {
+              "n": "19200",
+              "v": 2
+            },
+            {
+              "n": "38400",
+              "v": 3
+            },
+            {
+              "n": "57600",
+              "v": 4
+            },
+            {
+              "n": "115200",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "l": "output.status",
+          "ao": 13,
+          "bl": 16,
+          "is_little_endian": false,
+          "is": false,
+          "m": 1,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 1,
+          "u": "",
+          "st": [
+            {
+              "n": "off",
+              "v": 0
+            },
+            {
+              "n": "on",
+              "v": 1
+            }
+          ]
+        },
+        {
+          "l": "power.on.output.status",
+          "ao": 14,
+          "bl": 16,
+          "is_little_endian": false,
+          "is": false,
+          "m": 1,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 1,
+          "u": "",
+          "st": [
+            {
+              "n": "invalid",
+              "v": 0
+            },
+            {
+              "n": "auto-on",
+              "v": 1
+            }
+          ]
+        },
+        {
+          "l": "pulse.output.count",
+          "ao": 15,
+          "bl": 16,
+          "is_little_endian": false,
+          "is": false,
+          "m": 1,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 60000,
+          "u": ""
+        },
+        {
+          "l": "number.of.pwm.pulses",
+          "ao": 16,
+          "bl": 16,
+          "is_little_endian": false,
+          "is": false,
+          "m": 1,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 60000,
+          "u": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "m": "cummings",
+      "md": "PowerCommand 2.x/3.x",
+      "d": "generator set controller",
+      "p": "PC2_3",
+      "hr": [
+        {
+          "l": "control.switch.position",
+          "ao": 10,
+          "bl": 16,
+          "is": false,
+          "m": 1,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 2,
+          "u": "",
+          "st": [
+            {
+              "i": 0,
+              "n": "Off"
+            },
+            {
+              "i": 1,
+              "n": "Auto"
+            },
+            {
+              "i": 2,
+              "n": "Manual"
+            }
+          ]
+        },
+        {
+          "l": "most.recent.fault.or.warning",
+          "ao": 12,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 65530.0,
+          "u": ""
+        },
+        {
+          "l": "modbus.register.40013",
+          "ao": 13,
+          "bl": 16,
+          "is": false,
+          "m": 1,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 3,
+          "u": "",
+          "st": [
+            {
+              "i": 0,
+              "n": "None"
+            },
+            {
+              "i": 1,
+              "n": "Warning"
+            },
+            {
+              "i": 2,
+              "n": "Derate"
+            },
+            {
+              "i": 3,
+              "n": "Shutdown with Cooldown 4: Shutdown"
+            }
+          ]
+        },
+        {
+          "l": "genset.l1n.voltage",
+          "ao": 18,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "Vac"
+        },
+        {
+          "l": "genset.l2n.voltage",
+          "ao": 19,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "Vac"
+        },
+        {
+          "l": "genset.l3n.voltage",
+          "ao": 20,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "Vac"
+        },
+        {
+          "l": "genset.ln.average.voltage",
+          "ao": 21,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "Vac"
+        },
+        {
+          "l": "genset.l1l2.voltage",
+          "ao": 22,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "Vac"
+        },
+        {
+          "l": "genset.l2l3.voltage",
+          "ao": 23,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "Vac"
+        },
+        {
+          "l": "genset.l3l1.voltage",
+          "ao": 24,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "Vac"
+        },
+        {
+          "l": "genset.ll.average.voltage",
+          "ao": 25,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "Vac"
+        },
+        {
+          "l": "genset.l1.current",
+          "ao": 26,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "Amps"
+        },
+        {
+          "l": "genset.l2.current",
+          "ao": 27,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "Amps"
+        },
+        {
+          "l": "genset.l3.current",
+          "ao": 28,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "Amps"
+        },
+        {
+          "l": "genset.average.current",
+          "ao": 29,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "Amps"
+        },
+        {
+          "l": "genset.l1.kw",
+          "ao": 31,
+          "bl": 16,
+          "is": true,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "kW"
+        },
+        {
+          "l": "genset.l2.kw",
+          "ao": 32,
+          "bl": 16,
+          "is": true,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": -32768.0,
+          "max": 32762.0,
+          "u": "kW"
+        },
+        {
+          "l": "genset.l3.kw",
+          "ao": 33,
+          "bl": 16,
+          "is": true,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": -32768.0,
+          "max": 32762.0,
+          "u": "kW"
+        },
+        {
+          "l": "genset.total.kw",
+          "ao": 34,
+          "bl": 16,
+          "is": true,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "kW"
+        },
+        {
+          "l": "genset.l1.kvar",
+          "ao": 35,
+          "bl": 16,
+          "is": true,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "kVAR"
+        },
+        {
+          "l": "genset.l2.kvar",
+          "ao": 36,
+          "bl": 16,
+          "is": true,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": -32768.0,
+          "max": 32762.0,
+          "u": "kVAR"
+        },
+        {
+          "l": "genset.l3.kvar",
+          "ao": 37,
+          "bl": 16,
+          "is": true,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "kVAR"
+        },
+        {
+          "l": "genset.total.kvar",
+          "ao": 38,
+          "bl": 16,
+          "is": true,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "kVAR"
+        },
+        {
+          "l": "genset.total.power.factor",
+          "ao": 39,
+          "bl": 16,
+          "is": true,
+          "m": 0.01,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "PF"
+        },
+        {
+          "l": "genset.l1.kva",
+          "ao": 40,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "kVA"
+        },
+        {
+          "l": "genset.l2.kva",
+          "ao": 41,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "kVA"
+        },
+        {
+          "l": "genset.l3.kva",
+          "ao": 42,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "kVA"
+        },
+        {
+          "l": "genset.total.kva",
+          "ao": 43,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "kVA"
+        },
+        {
+          "l": "genset.frequency.op",
+          "ao": 44,
+          "bl": 16,
+          "is": false,
+          "m": 0.01,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "Hz"
+        },
+        {
+          "l": "genset.total.positive.kwh",
+          "ao": 48,
+          "bl": 32,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0.0,
+          "max": 4294967290.0,
+          "u": "kWh"
+        },
+        {
+          "l": "genset.total.net.kwh",
+          "ao": 50,
+          "bl": 32,
+          "is": true,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": -2147483648.0,
+          "max": 2147483643.0,
+          "u": "kWh"
+        },
+        {
+          "l": "battery.voltage",
+          "ao": 61,
+          "bl": 16,
+          "is": false,
+          "m": 0.1,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "Vdc"
+        },
+        {
+          "l": "oil.pressure",
+          "ao": 62,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "kPa"
+        },
+        {
+          "l": "oil.temperature",
+          "ao": 63,
+          "bl": 16,
+          "is": true,
+          "m": 0.1,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "degF"
+        },
+        {
+          "l": "coolant.temperature",
+          "ao": 64,
+          "bl": 16,
+          "is": true,
+          "m": 0.1,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "degC"
+        },
+        {
+          "l": "intake.manifold.temperature",
+          "ao": 65,
+          "bl": 16,
+          "is": true,
+          "m": 0.1,
+          "o": "0",
+          "dt": "int",
+          "min": -40.0,
+          "max": 410.0,
+          "u": "degF"
+        },
+        {
+          "l": "fuel.rate",
+          "ao": 67,
+          "bl": 16,
+          "is": true,
+          "m": 0.05,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "gal/hr"
+        },
+        {
+          "l": "average.engine.speed",
+          "ao": 68,
+          "bl": 16,
+          "is": false,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "RPM"
+        },
+        {
+          "l": "engine.running.time",
+          "ao": 70,
+          "bl": 32,
+          "is": false,
+          "m": 0.1,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "seconds"
+        },
+        {
+          "l": "total.fuel.consumption",
+          "ao": 72,
+          "bl": 32,
+          "is": false,
+          "m": 0.1,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "gallons"
+        },
+        {
+          "l": "engine.state",
+          "ao": 237,
+          "bl": 16,
+          "is": false,
+          "m": 1,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 15,
+          "u": "",
+          "st": [
+            {
+              "i": 0,
+              "n": "Stop"
+            },
+            {
+              "i": 1,
+              "n": "Ventilation"
+            },
+            {
+              "i": 2,
+              "n": "Start"
+            },
+            {
+              "i": 3,
+              "n": "Run"
+            },
+            {
+              "i": 4,
+              "n": "Normal Shutdown"
+            },
+            {
+              "i": 5,
+              "n": "Emergency Shutdown"
+            },
+            {
+              "i": 6,
+              "n": "Error"
+            },
+            {
+              "i": 7,
+              "n": "Don’t Care"
+            },
+            {
+              "i": 8,
+              "n": "Rapid Start"
+            },
+            {
+              "i": 9,
+              "n": "Reserved"
+            },
+            {
+              "i": 10,
+              "n": "Reserved"
+            },
+            {
+              "i": 11,
+              "n": "Reserved"
+            },
+            {
+              "i": 12,
+              "n": "Reserved"
+            },
+            {
+              "i": 13,
+              "n": "Reserved"
+            },
+            {
+              "i": 14,
+              "n": "Reserved"
+            },
+            {
+              "i": 15,
+              "n": "Don’t Care / Take No Action"
+            }
+          ]
+        },
+        {
+          "l": "controller.mode",
+          "ao": 283,
+          "bl": 16,
+          "is": false,
+          "m": 1,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 9,
+          "u": "",
+          "st": [
+            {
+              "i": 0,
+              "n": "Off"
+            },
+            {
+              "i": 1,
+              "n": "Ready"
+            },
+            {
+              "i": 2,
+              "n": "Setup"
+            },
+            {
+              "i": 3,
+              "n": "Starting"
+            },
+            {
+              "i": 4,
+              "n": "Idle"
+            },
+            {
+              "i": 5,
+              "n": "Rated"
+            },
+            {
+              "i": 6,
+              "n": "Stop Normal"
+            },
+            {
+              "i": 7,
+              "n": "Stop Emergency"
+            },
+            {
+              "i": 8,
+              "n": "Factory Test"
+            },
+            {
+              "i": 9,
+              "n": "Wait to Power Down"
+            }
+          ]
+        },
+        {
+          "l": "low.fuel.switch",
+          "ao": 500,
+          "bl": 16,
+          "is": false,
+          "m": 1,
+          "o": 0,
+          "dt": "int",
+          "min": 0,
+          "max": 1,
+          "u": "",
+          "st": [
+            {
+              "i": 0,
+              "n": "Inactive"
+            },
+            {
+              "i": 1,
+              "n": "Active"
+            }
+          ]
+        },
+        {
+          "l": "fuel.level.percentage.pccnet",
+          "ao": 3745,
+          "bl": 16,
+          "is": true,
+          "m": 0.1,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": "%"
+        },
+        {
+          "l": "fuel.level.pccnet",
+          "ao": 3746,
+          "bl": 16,
+          "is": true,
+          "m": 1.0,
+          "o": "0",
+          "dt": "int",
+          "min": 0,
+          "max": 0,
+          "u": ""
+        }
+      ]
+    }
+  ]
+}
