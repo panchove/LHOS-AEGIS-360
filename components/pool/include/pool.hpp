@@ -27,9 +27,17 @@ private:
         uint8_t* data = nullptr;
         bool used = false;
         size_t size = 0;
+        // view returned to callers (stable per-slot)
+        pool_buf_t view;
     };
 
     Slot* slots_ = nullptr;
+    // If pool allocated a contiguous backing region, keep pointer here
+    void* raw_memory_ = nullptr;
+    // Who owns raw_memory_ (true if pool allocated it)
+    bool owns_raw_memory_ = false;
+    // Whether buffers are placed in PSRAM
+    bool use_psram_ = false;
     size_t count_ = 0;
     size_t buf_size_ = 0;
 };

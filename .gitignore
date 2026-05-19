@@ -1,23 +1,32 @@
-# Build output
+# Build artifacts
 build/
-
-# VS Code
-.vscode/
-
-# IDF cache
 sdkconfig
 sdkconfig.old
-
-# Temporary files
-*.pyc
-*.o
+*.bin
 *.elf
 *.map
-*.bin
+*.o
+*.d
+
+# VS Code (local)
+.vscode/
+# Ensure workspace settings are not committed
+.vscode/settings.json
+*.code-workspace
+
+# IDE files
+.idea/
+.clangd/
+compile_commands.json
+
+# Logs
 *.log
+*.bak
 
-# Local environment
-.env
-
-# MacOS
+# OS generated
 .DS_Store
+Thumbs.db
+
+# Flash backups
+flash.log
+*.backup

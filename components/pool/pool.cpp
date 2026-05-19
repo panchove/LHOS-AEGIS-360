@@ -5,7 +5,9 @@
 
 #ifdef ESP_PLATFORM
 #include "esp_heap_caps.h"
-#define AEGIS_MALLOC(sz) heap_caps_malloc((sz), MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT)
+// Prefer internal RAM allocation when PSRAM is not available. Using SPIRAM-only
+// flags may fail on devices without PSRAM (returns NULL). Use INTERNAL|8BIT.
+#define AEGIS_MALLOC(sz) heap_caps_malloc((sz), MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT)
 #define AEGIS_FREE(ptr) heap_caps_free(ptr)
 #else
 #define AEGIS_MALLOC(sz) malloc(sz)
@@ -17,10 +19,18 @@ using namespace aegis;
 PacketPool::~PacketPool()
 {
     if (slots_) {
-        for (size_t i = 0; i < count_; ++i) {
-            if (slots_[i].data) AEGIS_FREE(slots_[i].data);
+        // If we allocated a contiguous raw buffer, free it once.
+        if (raw_memory_ && owns_raw_memory_) {
+            heap_caps_free(raw_memory_);
+            raw_memory_ = nullptr;
+            owns_raw_memory_ = false;
+        } else {
+            // Otherwise free per-slot allocations (rare path)
+            for (size_t i = 0; i < count_; ++i) {
+                if (slots_[i].data) heap_caps_free(slots_[i].data);
+            }
         }
-        AEGIS_FREE(slots_);
+        heap_caps_free(slots_);
         slots_ = nullptr;
     }
 }
@@ -31,21 +41,46 @@ bool PacketPool::init(void* backing, size_t count, size_t buf_size)
     count_ = count;
     buf_size_ = buf_size;
 
-    // allocate slot array in normal RAM (small)
-    slots_ = static_cast<Slot*>(AEGIS_MALLOC(sizeof(Slot) * count_));
+    // allocate slot array in internal RAM (small)
+    slots_ = static_cast<Slot*>(heap_caps_malloc(sizeof(Slot) * count_, MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT));
     if (!slots_) return false;
-    // placement-new each slot
-    for (size_t i = 0; i < count_; ++i) {
-        slots_[i].data = static_cast<uint8_t*>(AEGIS_MALLOC(buf_size_));
-        if (!slots_[i].data) {
-            // cleanup
-            for (size_t j = 0; j < i; ++j) AEGIS_FREE(slots_[j].data);
-            AEGIS_FREE(slots_);
-            slots_ = nullptr;
-            return false;
+
+    // If caller provided backing memory, use it (do not take ownership)
+    if (backing) {
+        raw_memory_ = backing;
+        owns_raw_memory_ = false;
+        use_psram_ = false; // caller decides
+    } else {
+        // Try PSRAM first
+        size_t total = count_ * buf_size_;
+        void* raw = heap_caps_malloc(total, MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT);
+        if (raw) {
+            raw_memory_ = raw;
+            owns_raw_memory_ = true;
+            use_psram_ = true;
+            ESP_LOGI("PacketPool", "Using PSRAM for buffers: %u x %u = %zu bytes", (unsigned)count_, (unsigned)buf_size_, total);
+        } else {
+            // Fallback to internal DRAM
+            raw = heap_caps_malloc(total, MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
+            if (!raw) {
+                heap_caps_free(slots_);
+                slots_ = nullptr;
+                return false;
+            }
+            raw_memory_ = raw;
+            owns_raw_memory_ = true;
+            use_psram_ = false;
+            ESP_LOGW("PacketPool", "PSRAM not available, using DRAM for buffers");
         }
+    }
+
+    // Initialize per-slot metadata and point into backing buffer
+    for (size_t i = 0; i < count_; ++i) {
+        slots_[i].data = static_cast<uint8_t*>(raw_memory_) + (i * buf_size_);
         slots_[i].size = buf_size_;
         slots_[i].used = false;
+        slots_[i].view.data = slots_[i].data;
+        slots_[i].view.len = slots_[i].size;
     }
     return true;
 }
@@ -54,17 +89,10 @@ pool_buf_t* PacketPool::alloc()
 {
     for (size_t i = 0; i < count_; ++i) {
         bool expected = false;
-        // simple atomic check via __atomic builtins
         if (!slots_[i].used) {
-            // try to claim
             if (__atomic_compare_exchange_n(&slots_[i].used, &expected, true, false, __ATOMIC_SEQ_CST, __ATOMIC_SEQ_CST)) {
-                // return view
-                pool_buf_t* b = reinterpret_cast<pool_buf_t*>(slots_[i].data); // temporary alias
-                // create a small meta struct on stack
-                static thread_local pool_buf_t meta;
-                meta.data = slots_[i].data;
-                meta.len = slots_[i].size;
-                return &meta;
+                // return the stable per-slot view
+                return &slots_[i].view;
             }
         }
     }
