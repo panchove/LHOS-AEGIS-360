@@ -1,0 +1,38 @@
+\doxysection{main.\+cpp}
+\hypertarget{main_8cpp_source}{}\label{main_8cpp_source}\index{main/main.cpp@{main/main.cpp}}
+\mbox{\hyperlink{main_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <cstdio>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}crc16.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{parser_8hpp}{parser.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{pool_8hpp}{pool.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00007}\mbox{\hyperlink{main_8cpp_abce06be17fc37d675118a678a8100a36}{00007}}\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8cpp_abce06be17fc37d675118a678a8100a36}{app\_main}}()}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00009}00009\ \ \ \ \ \textcolor{comment}{//\ Simple\ smoke\ tests\ executed\ on\ startup}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00010}00010\ \ \ \ \ \textcolor{comment}{//\ CRC\ test\ vector\ "{}123456789"{}\ -\/>\ 0x29B1}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ v\ =\ \textcolor{stringliteral}{"{}123456789"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00012}00012\ \ \ \ \ uint16\_t\ c\ =\ \mbox{\hyperlink{namespaceaegis_1_1crc16_afd42407b8222e3f026f131328368ddbb}{aegis::crc16::ccitt}}(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }uint8\_t*\textcolor{keyword}{>}(v),\ strlen(v));}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00013}00013\ \ \ \ \ printf(\textcolor{stringliteral}{"{}CRC\ test:\ 0x\%04X\ (expect\ 0x29B1)\(\backslash\)n"{}},\ c);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{comment}{//\ Packet\ parser\ example}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{classaegis_1_1PacketParser}{aegis::PacketParser}}\ parser;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00017}00017\ \ \ \ \ parser.\mbox{\hyperlink{classaegis_1_1PacketParser_add5eca569db5f1ef48e1d70c6f8ff54c}{init}}([](\textcolor{keyword}{const}\ uint8\_t*\ data,\ \textcolor{keywordtype}{size\_t}\ len)\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Parsed\ packet\ (\%zu):\ \%.*s\(\backslash\)n"{}},\ len,\ (\textcolor{keywordtype}{int})len,\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*)data);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00019}00019\ \ \ \ \ \},\ 1000);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ msg\ =\ \textcolor{stringliteral}{"{}<Pb>Hello</Pb>"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00022}00022\ \ \ \ \ parser.\mbox{\hyperlink{classaegis_1_1PacketParser_a1bb9666fe152966fe6714fd67bd095d4}{feed\_bytes}}((\textcolor{keyword}{const}\ uint8\_t*)msg,\ strlen(msg));}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{comment}{//\ PacketPool\ example}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{classaegis_1_1PacketPool}{aegis::PacketPool}}\ pool;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00026}00026\ \ \ \ \ pool.\mbox{\hyperlink{classaegis_1_1PacketPool_abfbcccd06da536073f7bb20f7de9ddc2}{init}}(\textcolor{keyword}{nullptr},\ 16,\ 512);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keyword}{auto}\ b\ =\ pool.\mbox{\hyperlink{classaegis_1_1PacketPool_af4f99cd52b92eb6a2ff807ea377d8f38}{alloc}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{if}\ (b)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Allocated\ buffer\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ pool.\mbox{\hyperlink{classaegis_1_1PacketPool_ae4d9eacd06876f14e945448e6ec316d5}{release}}(b);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00032}00032\ \}}
+
+\end{DoxyCode}

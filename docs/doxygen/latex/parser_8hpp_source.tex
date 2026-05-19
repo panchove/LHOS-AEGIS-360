@@ -1,0 +1,32 @@
+\doxysection{parser.\+hpp}
+\hypertarget{parser_8hpp_source}{}\label{parser_8hpp_source}\index{components/parser/include/parser.hpp@{components/parser/include/parser.hpp}}
+\mbox{\hyperlink{parser_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceaegis}{aegis}}\ \{}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00008}\mbox{\hyperlink{classaegis_1_1PacketParser}{00008}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classaegis_1_1PacketParser}{PacketParser}}\ \{}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00009}00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00010}\mbox{\hyperlink{classaegis_1_1PacketParser_a1a19db1a6722fd7ff8bea5b4c6015fbb}{00010}}\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classaegis_1_1PacketParser_a1a19db1a6722fd7ff8bea5b4c6015fbb}{Callback}}\ =\ std::function<void(\textcolor{keyword}{const}\ uint8\_t*,\ \textcolor{keywordtype}{size\_t})>;}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00011}\mbox{\hyperlink{classaegis_1_1PacketParser_a94d27a858846422724f6a723b3d1f09e}{00011}}\ \ \ \ \ \mbox{\hyperlink{classaegis_1_1PacketParser_a94d27a858846422724f6a723b3d1f09e}{PacketParser}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00012}00012\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaegis_1_1PacketParser_add5eca569db5f1ef48e1d70c6f8ff54c}{init}}(\mbox{\hyperlink{classaegis_1_1PacketParser_a1a19db1a6722fd7ff8bea5b4c6015fbb}{Callback}}\ cb,\ uint32\_t\ timeout\_ms);}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaegis_1_1PacketParser_ac3a6ca3dd6abc16860fe3f15d7c3476f}{feed\_byte}}(uint8\_t\ b);}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaegis_1_1PacketParser_a1bb9666fe152966fe6714fd67bd095d4}{feed\_bytes}}(\textcolor{keyword}{const}\ uint8\_t*\ data,\ \textcolor{keywordtype}{size\_t}\ len);}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaegis_1_1PacketParser_ad7a88bda677d54a7353a718aae7091cc}{reset}}();}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00017}00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00018}\mbox{\hyperlink{classaegis_1_1PacketParser_a15a22bb6c222611cc75a07bedfbf3658}{00018}}\ \ \ \ \ \mbox{\hyperlink{classaegis_1_1PacketParser_a1a19db1a6722fd7ff8bea5b4c6015fbb}{Callback}}\ \mbox{\hyperlink{classaegis_1_1PacketParser_a15a22bb6c222611cc75a07bedfbf3658}{cb\_}};}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00019}\mbox{\hyperlink{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3ac5943ab5aa6a4bde56ade8c0417fc1f7}{00019}}\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3}{State}}\ \{\ \mbox{\hyperlink{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3ac5943ab5aa6a4bde56ade8c0417fc1f7}{Idle}},\ \mbox{\hyperlink{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3a9f0d7871e59d4322bf4229b5c93bcf3e}{InTag}},\ \mbox{\hyperlink{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3a343c0851a383d83ae5f660f829c07872}{InBody}}\ \}\ \mbox{\hyperlink{classaegis_1_1PacketParser_aee8a603c1d3591e9da1428c59679a6b5}{state\_}}\ =\ \mbox{\hyperlink{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3ac5943ab5aa6a4bde56ade8c0417fc1f7}{Idle}};}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00020}\mbox{\hyperlink{classaegis_1_1PacketParser_a69a827fe4ca74eedae7d0b902d98cff2}{00020}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classaegis_1_1PacketParser_a69a827fe4ca74eedae7d0b902d98cff2}{BUF\_SZ}}\ =\ 2048;}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00021}\mbox{\hyperlink{classaegis_1_1PacketParser_adc9b2617f570cca26853cc3773590fdf}{00021}}\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{classaegis_1_1PacketParser_adc9b2617f570cca26853cc3773590fdf}{buf\_}}[\mbox{\hyperlink{classaegis_1_1PacketParser_a69a827fe4ca74eedae7d0b902d98cff2}{BUF\_SZ}}];}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00022}\mbox{\hyperlink{classaegis_1_1PacketParser_ada39b1755be726ee2b61c8dae56491f2}{00022}}\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classaegis_1_1PacketParser_ada39b1755be726ee2b61c8dae56491f2}{pos\_}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00023}\mbox{\hyperlink{classaegis_1_1PacketParser_a3f0168af541777d93aca3ccecfd4af8f}{00023}}\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classaegis_1_1PacketParser_a3f0168af541777d93aca3ccecfd4af8f}{tag\_open\_}}[4]\ =\ \{0\};}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00024}00024\ \};}
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{parser_8hpp_source_l00026}00026\ \}\ \textcolor{comment}{//\ namespace\ aegis}}
+
+\end{DoxyCode}

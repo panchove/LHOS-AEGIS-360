@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['2026_2005_2019_0',['2026 05 19',['..//home/panchove/Projects/LHOS-AEGIS-360/docs/iso12207/SDP.1_requirements.md#autotoc_md7',1,'last_reviewed: 2026-05-19'],['..//home/panchove/Projects/LHOS-AEGIS-360/docs/iso12207/SDP.2_architecture.md#autotoc_md16',1,'last_reviewed: 2026-05-19'],['..//home/panchove/Projects/LHOS-AEGIS-360/docs/iso12207/SDP.3_interface_specs/CRC16_API.md#autotoc_md30',1,'last_reviewed: 2026-05-19'],['..//home/panchove/Projects/LHOS-AEGIS-360/docs/iso12207/SDP.3_interface_specs/PARSER_API.md#autotoc_md38',1,'last_reviewed: 2026-05-19'],['..//home/panchove/Projects/LHOS-AEGIS-360/docs/iso12207/SDP.3_interface_specs/POOL_API.md#autotoc_md46',1,'last_reviewed: 2026-05-19'],['..//home/panchove/Projects/LHOS-AEGIS-360/docs/templates/iso12207_template.md#autotoc_md54',1,'last_reviewed: 2026-05-19']]],
+  ['2_5farchitecture_1',['@page md_docs_2iso12207_2SDP_82__architecture SDP.2_architecture',['..//home/panchove/Projects/LHOS-AEGIS-360/docs/iso12207/SDP.2_architecture.md#autotoc_md15',1,'']]]
+];

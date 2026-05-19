@@ -1,0 +1,230 @@
+\doxysection{aegis\+::Packet\+Parser Class Reference}
+\hypertarget{classaegis_1_1PacketParser}{}\label{classaegis_1_1PacketParser}\index{aegis::PacketParser@{aegis::PacketParser}}
+
+
+{\ttfamily \#include $<$parser.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classaegis_1_1PacketParser_a1a19db1a6722fd7ff8bea5b4c6015fbb}{Callback}} = std\+::function$<$ void(const uint8\+\_\+t \texorpdfstring{$\ast$}{*}, size\+\_\+t)$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaegis_1_1PacketParser_a94d27a858846422724f6a723b3d1f09e}{Packet\+Parser}} ()=default
+\item 
+void \mbox{\hyperlink{classaegis_1_1PacketParser_add5eca569db5f1ef48e1d70c6f8ff54c}{init}} (\mbox{\hyperlink{classaegis_1_1PacketParser_a1a19db1a6722fd7ff8bea5b4c6015fbb}{Callback}} cb, uint32\+\_\+t timeout\+\_\+ms)
+\item 
+void \mbox{\hyperlink{classaegis_1_1PacketParser_ac3a6ca3dd6abc16860fe3f15d7c3476f}{feed\+\_\+byte}} (uint8\+\_\+t b)
+\item 
+void \mbox{\hyperlink{classaegis_1_1PacketParser_a1bb9666fe152966fe6714fd67bd095d4}{feed\+\_\+bytes}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, size\+\_\+t len)
+\item 
+void \mbox{\hyperlink{classaegis_1_1PacketParser_ad7a88bda677d54a7353a718aae7091cc}{reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3}{State}} \{ \mbox{\hyperlink{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3ac5943ab5aa6a4bde56ade8c0417fc1f7}{Idle}}
+, \mbox{\hyperlink{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3a9f0d7871e59d4322bf4229b5c93bcf3e}{In\+Tag}}
+, \mbox{\hyperlink{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3a343c0851a383d83ae5f660f829c07872}{In\+Body}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaegis_1_1PacketParser_a1a19db1a6722fd7ff8bea5b4c6015fbb}{Callback}} \mbox{\hyperlink{classaegis_1_1PacketParser_a15a22bb6c222611cc75a07bedfbf3658}{cb\+\_\+}}
+\item 
+enum \mbox{\hyperlink{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3}{aegis\+::\+Packet\+Parser\+::\+State}} \mbox{\hyperlink{classaegis_1_1PacketParser_aee8a603c1d3591e9da1428c59679a6b5}{state\+\_\+}} = \mbox{\hyperlink{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3ac5943ab5aa6a4bde56ade8c0417fc1f7}{Idle}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classaegis_1_1PacketParser_adc9b2617f570cca26853cc3773590fdf}{buf\+\_\+}} \mbox{[}\mbox{\hyperlink{classaegis_1_1PacketParser_a69a827fe4ca74eedae7d0b902d98cff2}{BUF\+\_\+\+SZ}}\mbox{]}
+\item 
+size\+\_\+t \mbox{\hyperlink{classaegis_1_1PacketParser_ada39b1755be726ee2b61c8dae56491f2}{pos\+\_\+}} = 0
+\item 
+char \mbox{\hyperlink{classaegis_1_1PacketParser_a3f0168af541777d93aca3ccecfd4af8f}{tag\+\_\+open\+\_\+}} \mbox{[}4\mbox{]} = \{0\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classaegis_1_1PacketParser_a69a827fe4ca74eedae7d0b902d98cff2}{BUF\+\_\+\+SZ}} = 2048
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{parser_8hpp_source_l00008}{8}} of file \mbox{\hyperlink{parser_8hpp_source}{parser.\+hpp}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classaegis_1_1PacketParser_a1a19db1a6722fd7ff8bea5b4c6015fbb}\label{classaegis_1_1PacketParser_a1a19db1a6722fd7ff8bea5b4c6015fbb} 
+\index{aegis::PacketParser@{aegis::PacketParser}!Callback@{Callback}}
+\index{Callback@{Callback}!aegis::PacketParser@{aegis::PacketParser}}
+\doxysubsubsection{\texorpdfstring{Callback}{Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classaegis_1_1PacketParser_a1a19db1a6722fd7ff8bea5b4c6015fbb}{aegis\+::\+Packet\+Parser\+::\+Callback}} =  std\+::function$<$void(const uint8\+\_\+t\texorpdfstring{$\ast$}{*}, size\+\_\+t)$>$}
+
+
+
+Definition at line \mbox{\hyperlink{parser_8hpp_source_l00010}{10}} of file \mbox{\hyperlink{parser_8hpp_source}{parser.\+hpp}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3}\label{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3} 
+\index{aegis::PacketParser@{aegis::PacketParser}!State@{State}}
+\index{State@{State}!aegis::PacketParser@{aegis::PacketParser}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3}{aegis\+::\+Packet\+Parser\+::\+State}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Idle@{Idle}!aegis::PacketParser@{aegis::PacketParser}}\index{aegis::PacketParser@{aegis::PacketParser}!Idle@{Idle}}}\Hypertarget{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3ac5943ab5aa6a4bde56ade8c0417fc1f7}\label{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3ac5943ab5aa6a4bde56ade8c0417fc1f7} 
+Idle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InTag@{InTag}!aegis::PacketParser@{aegis::PacketParser}}\index{aegis::PacketParser@{aegis::PacketParser}!InTag@{InTag}}}\Hypertarget{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3a9f0d7871e59d4322bf4229b5c93bcf3e}\label{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3a9f0d7871e59d4322bf4229b5c93bcf3e} 
+In\+Tag&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InBody@{InBody}!aegis::PacketParser@{aegis::PacketParser}}\index{aegis::PacketParser@{aegis::PacketParser}!InBody@{InBody}}}\Hypertarget{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3a343c0851a383d83ae5f660f829c07872}\label{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3a343c0851a383d83ae5f660f829c07872} 
+In\+Body&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{parser_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{parser_8hpp_source}{parser.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classaegis_1_1PacketParser_a94d27a858846422724f6a723b3d1f09e}\label{classaegis_1_1PacketParser_a94d27a858846422724f6a723b3d1f09e} 
+\index{aegis::PacketParser@{aegis::PacketParser}!PacketParser@{PacketParser}}
+\index{PacketParser@{PacketParser}!aegis::PacketParser@{aegis::PacketParser}}
+\doxysubsubsection{\texorpdfstring{PacketParser()}{PacketParser()}}
+{\footnotesize\ttfamily aegis\+::\+Packet\+Parser\+::\+Packet\+Parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classaegis_1_1PacketParser_ac3a6ca3dd6abc16860fe3f15d7c3476f}\label{classaegis_1_1PacketParser_ac3a6ca3dd6abc16860fe3f15d7c3476f} 
+\index{aegis::PacketParser@{aegis::PacketParser}!feed\_byte@{feed\_byte}}
+\index{feed\_byte@{feed\_byte}!aegis::PacketParser@{aegis::PacketParser}}
+\doxysubsubsection{\texorpdfstring{feed\_byte()}{feed\_byte()}}
+{\footnotesize\ttfamily void aegis\+::\+Packet\+Parser\+::feed\+\_\+byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{parser_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{parser_8cpp_source}{parser.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{parser_8hpp_source_l00021}{buf\+\_\+}}, \mbox{\hyperlink{parser_8hpp_source_l00020}{BUF\+\_\+\+SZ}}, \mbox{\hyperlink{parser_8hpp_source_l00019}{Idle}}, \mbox{\hyperlink{parser_8hpp_source_l00019}{In\+Body}}, \mbox{\hyperlink{parser_8hpp_source_l00019}{In\+Tag}}, \mbox{\hyperlink{parser_8hpp_source_l00022}{pos\+\_\+}}, \mbox{\hyperlink{classaegis_1_1PacketParser_aee8a603c1d3591e9da1428c59679a6b5}{state\+\_\+}}, and \mbox{\hyperlink{parser_8hpp_source_l00023}{tag\+\_\+open\+\_\+}}.
+
+\Hypertarget{classaegis_1_1PacketParser_a1bb9666fe152966fe6714fd67bd095d4}\label{classaegis_1_1PacketParser_a1bb9666fe152966fe6714fd67bd095d4} 
+\index{aegis::PacketParser@{aegis::PacketParser}!feed\_bytes@{feed\_bytes}}
+\index{feed\_bytes@{feed\_bytes}!aegis::PacketParser@{aegis::PacketParser}}
+\doxysubsubsection{\texorpdfstring{feed\_bytes()}{feed\_bytes()}}
+{\footnotesize\ttfamily void aegis\+::\+Packet\+Parser\+::feed\+\_\+bytes (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{parser_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{parser_8cpp_source}{parser.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{parser_8hpp_source_l00018}{cb\+\_\+}}.
+
+\Hypertarget{classaegis_1_1PacketParser_add5eca569db5f1ef48e1d70c6f8ff54c}\label{classaegis_1_1PacketParser_add5eca569db5f1ef48e1d70c6f8ff54c} 
+\index{aegis::PacketParser@{aegis::PacketParser}!init@{init}}
+\index{init@{init}!aegis::PacketParser@{aegis::PacketParser}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void aegis\+::\+Packet\+Parser\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaegis_1_1PacketParser_a1a19db1a6722fd7ff8bea5b4c6015fbb}{Callback}}}]{cb,  }\item[{uint32\+\_\+t}]{timeout\+\_\+ms }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{parser_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{parser_8cpp_source}{parser.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{parser_8hpp_source_l00018}{cb\+\_\+}}, and \mbox{\hyperlink{parser_8cpp_source_l00014}{reset()}}.
+
+\Hypertarget{classaegis_1_1PacketParser_ad7a88bda677d54a7353a718aae7091cc}\label{classaegis_1_1PacketParser_ad7a88bda677d54a7353a718aae7091cc} 
+\index{aegis::PacketParser@{aegis::PacketParser}!reset@{reset}}
+\index{reset@{reset}!aegis::PacketParser@{aegis::PacketParser}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void aegis\+::\+Packet\+Parser\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{parser_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{parser_8cpp_source}{parser.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{parser_8hpp_source_l00021}{buf\+\_\+}}, \mbox{\hyperlink{parser_8hpp_source_l00020}{BUF\+\_\+\+SZ}}, \mbox{\hyperlink{parser_8hpp_source_l00019}{Idle}}, \mbox{\hyperlink{parser_8hpp_source_l00022}{pos\+\_\+}}, and \mbox{\hyperlink{classaegis_1_1PacketParser_aee8a603c1d3591e9da1428c59679a6b5}{state\+\_\+}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classaegis_1_1PacketParser_adc9b2617f570cca26853cc3773590fdf}\label{classaegis_1_1PacketParser_adc9b2617f570cca26853cc3773590fdf} 
+\index{aegis::PacketParser@{aegis::PacketParser}!buf\_@{buf\_}}
+\index{buf\_@{buf\_}!aegis::PacketParser@{aegis::PacketParser}}
+\doxysubsubsection{\texorpdfstring{buf\_}{buf\_}}
+{\footnotesize\ttfamily uint8\+\_\+t aegis\+::\+Packet\+Parser\+::buf\+\_\+\mbox{[}\mbox{\hyperlink{classaegis_1_1PacketParser_a69a827fe4ca74eedae7d0b902d98cff2}{BUF\+\_\+\+SZ}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{parser_8hpp_source_l00021}{21}} of file \mbox{\hyperlink{parser_8hpp_source}{parser.\+hpp}}.
+
+\Hypertarget{classaegis_1_1PacketParser_a69a827fe4ca74eedae7d0b902d98cff2}\label{classaegis_1_1PacketParser_a69a827fe4ca74eedae7d0b902d98cff2} 
+\index{aegis::PacketParser@{aegis::PacketParser}!BUF\_SZ@{BUF\_SZ}}
+\index{BUF\_SZ@{BUF\_SZ}!aegis::PacketParser@{aegis::PacketParser}}
+\doxysubsubsection{\texorpdfstring{BUF\_SZ}{BUF\_SZ}}
+{\footnotesize\ttfamily const size\+\_\+t aegis\+::\+Packet\+Parser\+::\+BUF\+\_\+\+SZ = 2048\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{parser_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{parser_8hpp_source}{parser.\+hpp}}.
+
+\Hypertarget{classaegis_1_1PacketParser_a15a22bb6c222611cc75a07bedfbf3658}\label{classaegis_1_1PacketParser_a15a22bb6c222611cc75a07bedfbf3658} 
+\index{aegis::PacketParser@{aegis::PacketParser}!cb\_@{cb\_}}
+\index{cb\_@{cb\_}!aegis::PacketParser@{aegis::PacketParser}}
+\doxysubsubsection{\texorpdfstring{cb\_}{cb\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaegis_1_1PacketParser_a1a19db1a6722fd7ff8bea5b4c6015fbb}{Callback}} aegis\+::\+Packet\+Parser\+::cb\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{parser_8hpp_source_l00018}{18}} of file \mbox{\hyperlink{parser_8hpp_source}{parser.\+hpp}}.
+
+\Hypertarget{classaegis_1_1PacketParser_ada39b1755be726ee2b61c8dae56491f2}\label{classaegis_1_1PacketParser_ada39b1755be726ee2b61c8dae56491f2} 
+\index{aegis::PacketParser@{aegis::PacketParser}!pos\_@{pos\_}}
+\index{pos\_@{pos\_}!aegis::PacketParser@{aegis::PacketParser}}
+\doxysubsubsection{\texorpdfstring{pos\_}{pos\_}}
+{\footnotesize\ttfamily size\+\_\+t aegis\+::\+Packet\+Parser\+::pos\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{parser_8hpp_source_l00022}{22}} of file \mbox{\hyperlink{parser_8hpp_source}{parser.\+hpp}}.
+
+\Hypertarget{classaegis_1_1PacketParser_aee8a603c1d3591e9da1428c59679a6b5}\label{classaegis_1_1PacketParser_aee8a603c1d3591e9da1428c59679a6b5} 
+\index{aegis::PacketParser@{aegis::PacketParser}!state\_@{state\_}}
+\index{state\_@{state\_}!aegis::PacketParser@{aegis::PacketParser}}
+\doxysubsubsection{\texorpdfstring{state\_}{state\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3}{aegis\+::\+Packet\+Parser\+::\+State}} aegis\+::\+Packet\+Parser\+::state\+\_\+ = \mbox{\hyperlink{classaegis_1_1PacketParser_a09d6f575d376dabe5f19d72938ce6bb3ac5943ab5aa6a4bde56ade8c0417fc1f7}{Idle}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classaegis_1_1PacketParser_a3f0168af541777d93aca3ccecfd4af8f}\label{classaegis_1_1PacketParser_a3f0168af541777d93aca3ccecfd4af8f} 
+\index{aegis::PacketParser@{aegis::PacketParser}!tag\_open\_@{tag\_open\_}}
+\index{tag\_open\_@{tag\_open\_}!aegis::PacketParser@{aegis::PacketParser}}
+\doxysubsubsection{\texorpdfstring{tag\_open\_}{tag\_open\_}}
+{\footnotesize\ttfamily char aegis\+::\+Packet\+Parser\+::tag\+\_\+open\+\_\+\mbox{[}4\mbox{]} = \{0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{parser_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{parser_8hpp_source}{parser.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+components/parser/include/\mbox{\hyperlink{parser_8hpp}{parser.\+hpp}}\item 
+components/parser/\mbox{\hyperlink{parser_8cpp}{parser.\+cpp}}\end{DoxyCompactItemize}

@@ -15,17 +15,20 @@ This is a firmware project for ESP32-S3 using ESP-IDF v5.5.3. The system is name
 ## Coding Standards
 
 ### C++17 Rules
+
 - **Allowed**: RAII, constexpr, std::optional, std::string_view, std::array, enum class, move semantics, auto
 - **Forbidden**: std::string, std::vector, std::map, std::set, std::function, exceptions, RTTI, new/delete manual
 - **Heap policy**: Heapless core. Only PacketPool may use heap_caps_malloc with MALLOC_CAP_SPIRAM
 
 ### Formatting
+
 - Indentation: 2 spaces (no tabs)
 - Line width: 100 characters
 - Braces: Allman style (braces on new line)
 - Pointer alignment: Left (Type* ptr)
 
 ### Naming Conventions
+
 - **Classes**: PascalCase (e.g., `PacketPool`, `MessageBus`)
 - **Functions**: snake_case (e.g., `ccitt_false`, `to_hex`)
 - **Variables**: snake_case (e.g., `num_buffers`, `buffer_size`)
@@ -34,6 +37,7 @@ This is a firmware project for ESP32-S3 using ESP-IDF v5.5.3. The system is name
 - **Files**: snake_case (e.g., `pool.hpp`, `message_bus.cpp`)
 
 ### Comments (Doxygen)
+
 All public interfaces must have Doxygen comments:
 
 ```cpp
@@ -49,12 +53,14 @@ uint16_t ccitt_false(const uint8_t* data, size_t len);
 ## Architecture
 
 ### Layers
+
 1. **HAL**: UART, SPI, I2C, GPIO (C only)
 2. **Core**: Pool, CRC16, Parser, MessageBus (C++17 heapless)
 3. **Services**: LTE, BLE, GNSS, Modbus (C++17)
 4. **Application**: Main, Commands (C++17)
 
 ### Key Components
+
 - **PacketPool**: Fixed-size buffer pool (16 x 512 bytes) in PSRAM/DRAM
 - **CRC16**: ROM wrapper for esp_rom_crc16_be()
 - **PacketParser**: FSM for `<Px>data</Px>CRC` packets

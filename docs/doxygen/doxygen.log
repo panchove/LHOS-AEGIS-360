@@ -1,0 +1,1521 @@
+warning: Tag 'DOT_FONTNAME' at line 47 of file 'Doxyfile' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOT_FONTSIZE' at line 48 of file 'Doxyfile' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+Doxygen version used: 1.9.8
+Searching for include files...
+Searching for example files...
+Searching for images...
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/docs/diagrams
+Searching for dot files...
+Searching for msc files...
+Searching for dia files...
+Searching for files to exclude
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/partition_table
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/idf_test
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/idf_test/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/driver
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/driver/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/driver/CMakeFiles/__idf_driver.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/driver/CMakeFiles/__idf_driver.dir/i2c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/driver/CMakeFiles/__idf_driver.dir/twai
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/driver/CMakeFiles/__idf_driver.dir/touch_sensor
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/driver/CMakeFiles/__idf_driver.dir/touch_sensor/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/driver/CMakeFiles/__idf_driver.dir/deprecated
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_gdbstub
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_gdbstub/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/port/xtensa
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/partition_table
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/partition_table/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/tcp_transport
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/tcp_transport/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/ulp
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/ulp/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/unity
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/unity/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/unity/CMakeFiles/__idf_unity.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/unity/CMakeFiles/__idf_unity.dir/unity
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/unity/CMakeFiles/__idf_unity.dir/unity/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/unity/CMakeFiles/__idf_unity.dir/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/unity/CMakeFiles/__idf_unity.dir/port/esp
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/nvs_sec_provider
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/nvs_sec_provider/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/nvs_sec_provider/CMakeFiles/__idf_nvs_sec_provider.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_mcpwm
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_mcpwm/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_wifi
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_wifi/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/regulatory
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_netif_stack
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_netif_stack/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/console
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/console/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/console/CMakeFiles/__idf_console.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/console/CMakeFiles/__idf_console.dir/argtable3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/console/CMakeFiles/__idf_console.dir/linenoise
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wpa_supplicant
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wpa_supplicant/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/rsn_supp
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_common
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/crypto
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_twai
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_twai/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_twai/CMakeFiles/__idf_esp_driver_twai.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_gpio
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_gpio/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_gpio/CMakeFiles/__idf_esp_driver_gpio.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_gpio/CMakeFiles/__idf_esp_driver_gpio.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hal_ieee802154
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hal_ieee802154/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/espcoredump
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/espcoredump/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/port/xtensa
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/mspi_timing_tuning
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/mspi_timing_tuning/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/mspi_timing_tuning/port/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/mspi_timing_tuning/port/esp32s3/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/port/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/port/esp32s3/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/lowpower
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/lowpower/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/dma
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mspi_timing_tuning
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mspi_timing_tuning/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mspi_timing_tuning/port/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/lowpower
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/lowpower/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/lowpower/port/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/power_supply
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/deprecated
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_usb_serial_jtag
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_usb_serial_jtag/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_usb_serial_jtag/CMakeFiles/__idf_esp_driver_usb_serial_jtag.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_usb_serial_jtag/CMakeFiles/__idf_esp_driver_usb_serial_jtag.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/main
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/main/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/main/CMakeFiles/__idf_main.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_timer
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_timer/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_jpeg
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_jpeg/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_common
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_common/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/perfmon
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/perfmon/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_security
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_security/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_netif
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_netif/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/lwip
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/lwip/netif
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/ieee802154
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/ieee802154/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_gptimer
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_gptimer/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_gptimer/CMakeFiles/__idf_esp_driver_gptimer.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_gptimer/CMakeFiles/__idf_esp_driver_gptimer.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/rt
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/rt/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/rt/CMakeFiles/__idf_rt.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/soc
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/soc/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/soc/CMakeFiles/__idf_soc.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/bt
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/bt/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_pcnt
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_pcnt/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_pcnt/CMakeFiles/__idf_esp_driver_pcnt.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_pcnt/CMakeFiles/__idf_esp_driver_pcnt.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_tsens
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_tsens/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_tsens/CMakeFiles/__idf_esp_driver_tsens.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_tsens/CMakeFiles/__idf_esp_driver_tsens.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_https_ota
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_https_ota/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_https_ota/CMakeFiles/__idf_esp_https_ota.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_https_ota/CMakeFiles/__idf_esp_https_ota.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_app_format
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_app_format/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_psram
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_psram/device
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_psram/device/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_psram/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_psram/CMakeFiles/__idf_esp_psram.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_psram/CMakeFiles/__idf_esp_psram.dir/device
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_psram/CMakeFiles/__idf_esp_psram.dir/system_layer
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_psram/CMakeFiles/__idf_esp_psram.dir/xip_impl
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_psram/xip_impl
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_psram/xip_impl/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/usb
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/usb/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/usb/CMakeFiles/__idf_usb.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_mm
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_mm/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/port/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/bootloader_support
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/bootloader_support/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/xtensa
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/xtensa/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_event
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_event/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_bootloader_format
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_bootloader_format/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_eth
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_eth/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/phy
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_bitscrambler
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_bitscrambler/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_ringbuf
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_ringbuf/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/touch_element
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/touch_element/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/touch_element/CMakeFiles/__idf_touch_element.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_isp
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_isp/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_coex
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_coex/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_coex/CMakeFiles/__idf_esp_coex.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_coex/CMakeFiles/__idf_esp_coex.dir/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_coex/CMakeFiles/__idf_esp_coex.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_rmt
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_rmt/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_rmt/CMakeFiles/__idf_esp_driver_rmt.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_rmt/CMakeFiles/__idf_esp_driver_rmt.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_sdspi
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_sdspi/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_sdspi/CMakeFiles/__idf_esp_driver_sdspi.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_sdspi/CMakeFiles/__idf_esp_driver_sdspi.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_ledc
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_ledc/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_ledc/CMakeFiles/__idf_esp_driver_ledc.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_ledc/CMakeFiles/__idf_esp_driver_ledc.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/app_trace
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/app_trace/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_parlio
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_parlio/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/heap
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/heap/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/heap/CMakeFiles/__idf_heap.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/heap/CMakeFiles/__idf_heap.dir/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/heap/CMakeFiles/__idf_heap.dir/port/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/heap/CMakeFiles/__idf_heap.dir/tlsf
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_sdmmc
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_sdmmc/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_sdmmc/CMakeFiles/__idf_esp_driver_sdmmc.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_sdmmc/CMakeFiles/__idf_esp_driver_sdmmc.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_i2c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_i2c/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_i2c/CMakeFiles/__idf_esp_driver_i2c.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/pool
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/pool/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/pool/CMakeFiles/__idf_pool.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/parser
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/parser/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/parser/CMakeFiles/__idf_parser.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/spiffs
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/spiffs/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hid
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hid/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/hal
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/hal/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/hal/CMakeFiles/__idf_hal.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/hal/CMakeFiles/__idf_hal.dir/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_dac
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_dac/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/newlib
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/newlib/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/newlib/src/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/newlib/src/port/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/newlib/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/port/xtensa
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_sdio
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_sdio/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_ana_cmpr
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_ana_cmpr/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wifi_provisioning
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wifi_provisioning/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/openthread
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/openthread/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_spi
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_spi/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_spi/CMakeFiles/__idf_esp_driver_spi.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_spi/CMakeFiles/__idf_esp_driver_spi.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_spi/CMakeFiles/__idf_esp_driver_spi.dir/src/gpspi
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_adc
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_adc/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/gdma
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/deprecated
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/deprecated/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/nvs_flash
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/nvs_flash/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/freertos
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/freertos/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/esp_additions
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/pthread
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/pthread/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/pthread/CMakeFiles/__idf_pthread.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/esp32xx
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/freertos
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/hooks
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/debug
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/apps
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/apps/ping
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/apps/sntp
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/apps/dhcpserver
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/polarssl
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/api
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/apps
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/apps/sntp
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/apps/netbiosns
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv4
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv6
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/efuse
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/efuse/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/efuse/CMakeFiles/__idf_efuse.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/efuse_controller
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/efuse_controller/keys
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/efuse_controller/keys/with_key_purposes
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_lcd
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_lcd/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i2c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i80
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/spi
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/rgb
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/protocomm
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/protocomm/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_partition
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_partition/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_http_client
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_http_client/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/lib
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/fatfs
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/fatfs/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/port/freertos
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wear_levelling
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wear_levelling/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/spi_flash
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/spi_flash/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_vfs_console
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_vfs_console/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_vfs_console/CMakeFiles/__idf_esp_vfs_console.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_rom
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_rom/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_uart
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_uart/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_uart/CMakeFiles/__idf_esp_driver_uart.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_uart/CMakeFiles/__idf_esp_driver_uart.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/json
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/json/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/json/CMakeFiles/__idf_json.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/json/CMakeFiles/__idf_json.dir/cJSON
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_pm
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_pm/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_phy
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_phy/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_system
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_system/ld
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_system/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_system/port/soc
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_system/port/soc/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_system/port/soc/esp32s3/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_system/port/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_system/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/task_wdt
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_local_ctrl
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_local_ctrl/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/proto-c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/panchove
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/panchove/esp
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/panchove/esp/esp-idf-v5.5.3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/panchove/esp/esp-idf-v5.5.3/components
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/panchove/esp/esp-idf-v5.5.3/components/mbedtls
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/panchove/esp/esp-idf-v5.5.3/components/mbedtls/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/panchove/esp/esp-idf-v5.5.3/components/mbedtls/port/aes
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/panchove/esp/esp-idf-v5.5.3/components/mbedtls/port/aes/dma
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/panchove/esp/esp-idf-v5.5.3/components/mbedtls/port/crypto_shared_gdma
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/panchove/esp/esp-idf-v5.5.3/components/mbedtls/port/sha
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/panchove/esp/esp-idf-v5.5.3/components/mbedtls/port/sha/core
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/panchove/esp/esp-idf-v5.5.3/components/mbedtls/port/md
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/panchove/esp/esp-idf-v5.5.3/components/mbedtls/port/bignum
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/panchove/esp/esp-idf-v5.5.3/components/mbedtls/port/esp_ds
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/home
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/home/panchove
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/home/panchove/esp
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/home/panchove/esp/esp-idf-v5.5.3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/home/panchove/esp/esp-idf-v5.5.3/components
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/home/panchove/esp/esp-idf-v5.5.3/components/mbedtls
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/home/panchove/esp/esp-idf-v5.5.3/components/mbedtls/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/3rdparty
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/3rdparty/p256-m
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/3rdparty/everest
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/3rdparty/everest/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/3rdparty/everest/CMakeFiles/everest.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/3rdparty/everest/CMakeFiles/everest.dir/library
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/3rdparty/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/pkgconfig
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/pkgconfig/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/include/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/mbedtls/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/CMakeFiles/__idf_mbedtls.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/CMakeFiles/__idf_mbedtls.dir/esp_crt_bundle
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/CMakeFiles/__idf_mbedtls.dir/__
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mbedtls/CMakeFiles/__idf_mbedtls.dir/__/__
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/bootloader
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/bootloader/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/app_update
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/app_update/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/app_update/CMakeFiles/__idf_app_update.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp-tls
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp-tls/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp-tls-crypto
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mqtt
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mqtt/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/vfs
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/vfs/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/vfs/CMakeFiles/__idf_vfs.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/cmock
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/cmock/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/cmock/CMakeFiles/__idf_cmock.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/cmock/CMakeFiles/__idf_cmock.dir/CMock
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/cmock/CMakeFiles/__idf_cmock.dir/CMock/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_sdm
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_sdm/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_sdm/CMakeFiles/__idf_esp_driver_sdm.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_sdm/CMakeFiles/__idf_esp_driver_sdm.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_i2s
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_i2s/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_i2s/CMakeFiles/__idf_esp_driver_i2s.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_cam
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_cam/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_cam/CMakeFiles/__idf_esp_driver_cam.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_cam/CMakeFiles/__idf_esp_driver_cam.dir/dvp
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_cam/CMakeFiles/__idf_esp_driver_cam.dir/dvp/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_touch_sens
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_touch_sens/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_touch_sens/CMakeFiles/__idf_esp_driver_touch_sens.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_touch_sens/CMakeFiles/__idf_esp_driver_touch_sens.dir/hw_ver2
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_touch_sens/CMakeFiles/__idf_esp_driver_touch_sens.dir/common
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/crc16
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/crc16/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_http_server
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_http_server/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/util
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_https_server
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_https_server/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_https_server/CMakeFiles/__idf_esp_https_server.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_https_server/CMakeFiles/__idf_esp_https_server.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/protobuf-c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/protobuf-c/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/protobuf-c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/protobuf-c/protobuf-c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/crc
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/crc/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/crc/CMakeFiles/__idf_crc.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/http_parser
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/http_parser/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_ppa
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esp_driver_ppa/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/log
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/log/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/log/CMakeFiles/__idf_log.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/log/CMakeFiles/__idf_log.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/log/CMakeFiles/__idf_log.dir/src/os
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/log/CMakeFiles/__idf_log.dir/src/log_level
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/log/CMakeFiles/__idf_log.dir/src/log_level/tag_log_level
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/log/CMakeFiles/__idf_log.dir/src/log_level/tag_log_level/cache
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/log/CMakeFiles/__idf_log.dir/src/log_level/tag_log_level/linked_list
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/log/CMakeFiles/__idf_log.dir/src/buffer
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/sdmmc
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/sdmmc/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sd_pwr_ctrl
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/cxx
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/cxx/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/cxx/CMakeFiles/__idf_cxx.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esptool_py
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/esp-idf/esptool_py/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader-prefix
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader-prefix/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader-prefix/src/bootloader-stamp
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader-prefix/tmp
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/gdbinit
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/config
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/CMakeFiles/aegis_core.elf.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/CMakeFiles/CMakeScratch
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/CMakeFiles/3.31.6
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/CMakeFiles/3.31.6/CompilerIdC
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/CMakeFiles/3.31.6/CompilerIdC/tmp
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/CMakeFiles/3.31.6/CompilerIdASM
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/CMakeFiles/3.31.6/CompilerIdCXX
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/CMakeFiles/3.31.6/CompilerIdCXX/tmp
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/CMakeFiles/bootloader.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/CMakeFiles/git-data
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/CMakeFiles/pkgRedirects
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/partition_table
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/partition_table/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_hw_support
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_hw_support/mspi_timing_tuning
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_hw_support/mspi_timing_tuning/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_hw_support/mspi_timing_tuning/port/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_hw_support/mspi_timing_tuning/port/esp32s3/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_hw_support/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_hw_support/port/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_hw_support/port/esp32s3/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_hw_support/lowpower
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_hw_support/lowpower/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_hw_support/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/main
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/main/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/main/CMakeFiles/__idf_main.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_common
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_common/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_security
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_security/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/soc
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/soc/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_app_format
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_app_format/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/bootloader_support
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/bootloader_support/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/xtensa
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/xtensa/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_bootloader_format
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_bootloader_format/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/hal
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/hal/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/hal/CMakeFiles/__idf_hal.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/hal/CMakeFiles/__idf_hal.dir/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/newlib
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/newlib/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/freertos
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/freertos/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/efuse
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/efuse/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/efuse/CMakeFiles/__idf_efuse.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32s3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/efuse_controller
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/efuse_controller/keys
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/efuse_controller/keys/with_key_purposes
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/spi_flash
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/spi_flash/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_rom
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_rom/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_system
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_system/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/bootloader
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/bootloader/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/micro-ecc
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/micro-ecc/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/log
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/log/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/log/CMakeFiles/__idf_log.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/log/CMakeFiles/__idf_log.dir/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/log/CMakeFiles/__idf_log.dir/src/noos
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/log/CMakeFiles/__idf_log.dir/src/buffer
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esptool_py
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/esp-idf/esptool_py/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/gdbinit
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/config
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/CMakeFiles
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/CMakeFiles/CMakeScratch
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/CMakeFiles/3.31.6
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/CMakeFiles/3.31.6/CompilerIdC
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/CMakeFiles/3.31.6/CompilerIdC/tmp
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/CMakeFiles/3.31.6/CompilerIdASM
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/CMakeFiles/3.31.6/CompilerIdCXX
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/CMakeFiles/3.31.6/CompilerIdCXX/tmp
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/CMakeFiles/git-data
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/CMakeFiles/bootloader.elf.dir
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/bootloader/CMakeFiles/pkgRedirects
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/build/log
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/TinyGSM
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/TinyGSM/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/TinyGSM/src/ArduinoCompat
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/TinyGSM/examples
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/TinyGSM/examples/HttpClient
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/TinyGSM/examples/WebClient
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/TinyGSM/examples/AllFunctions
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/TinyGSM/examples/FileDownload
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/TinyGSM/examples/MqttClient
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/TinyGSM/examples/BlynkClient
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/TinyGSM/examples/more
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/TinyGSM/examples/more/Industruino
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/TinyGSM/examples/more/SIM800_SslSetCert
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/TinyGSM/examples/more/Hologram_Dash
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/TinyGSM/examples/HttpsClient
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/TinyGSM_A7670Async
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/ARD1939ESP32S3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/ARD1939ESP32S3/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/ARD1939ESP32S3/examples
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/scripts
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-Arduino-IDE
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-Arduino-IDE/mqtt_gsm_SIM800L_Azure_x509_Device_Twin
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-Arduino-IDE/https_get_sim7600
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-Arduino-IDE/https_eth_LilyGo-T-ETH-POE
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-Arduino-IDE/https_post_sim7600
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-Arduino-IDE/https_gsm_SIM7000
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-Arduino-IDE/mqtt_secure_gsm_SIM7000
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-Arduino-IDE/https_wifi
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-Arduino-IDE/https_gsm_SIM800
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-platformIO
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-platformIO/t-call-esp32-sim800l-aws
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-platformIO/t-call-esp32-sim800l-aws/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-platformIO/t-call-esp32-sim800l-aws/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-platformIO/t-call-esp32-sim800l-cert-bundle
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-platformIO/t-call-esp32-sim800l-cert-bundle/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-platformIO/t-call-esp32-sim800l-alpn-protos
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-platformIO/t-call-esp32-sim800l-alpn-protos/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/SSLClient/examples/Esp32-platformIO/t-call-esp32-sim800l-alpn-protos/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/syscfg
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/ext
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/ext/tinycrypt
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/ext/tinycrypt/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/ext/tinycrypt/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/ext/tinycrypt/include/tinycrypt
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/console
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/esp_port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/esp_port/port
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/esp_port/port/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/esp_port/port/transport
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/esp_port/port/transport/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/esp_port/port/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/esp_port/esp-hci
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/esp_port/esp-hci/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/esp_port/esp-hci/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/npl
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/npl/freertos
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/npl/freertos/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/npl/freertos/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/npl/freertos/include/nimble
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/nimble
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/nimble/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/nimble/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/nimble/include/sysinit
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/nimble/include/syscfg
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/nimble/include/os
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/nimble/include/stats
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/nimble/include/hal
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/nimble/include/logcfg
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/nimble/include/modlog
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/nimble/include/log_common
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/nimble/include/sysflash
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/nimble/include/nimble
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/nimble/include/mem
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/porting/nimble/include/log
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/esp_ipc_legacy
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/esp_ipc_legacy/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/nrf5340
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/nrf5340/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/common
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/common/hci_h4
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/common/hci_h4/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/common/hci_h4/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/common/hci_h4/include/nimble
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/common/hci_h4/include/nimble/transport
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/common/hci_ipc
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/common/hci_ipc/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/common/hci_ipc/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/common/hci_ipc/include/nimble
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/common/hci_ipc/include/nimble/transport
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/include/nimble
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/include/nimble/transport
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/esp_ipc
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/transport/esp_ipc/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/include/nimble
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/drivers
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/drivers/nrf5x
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/drivers/nrf5x/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/drivers/nrf5x/src/nrf53
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/drivers/nrf5x/src/nrf52
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/drivers/nrf5x/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/drivers/nrf5x/include/ble
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/drivers/nrf51
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/drivers/nrf51/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/drivers/nrf51/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/drivers/nrf51/include/ble
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/controller
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/controller/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/controller/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/controller/include/controller
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/store
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/store/ram
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/store/ram/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/store/ram/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/store/ram/include/store
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/store/ram/include/store/ram
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/store/config
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/store/config/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/store/config/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/store/config/include/store
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/store/config/include/store/config
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/util
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/util/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/util/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/util/include/host
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/util/include/host/util
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/mesh
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/mesh/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/mesh/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/mesh/include/mesh
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/include/host
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/services
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/services/gap
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/services/gap/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/services/gap/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/services/gap/include/services
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/services/gap/include/services/gap
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/services/gatt
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/services/gatt/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/services/gatt/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/services/gatt/include/services
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/src/nimble/nimble/host/services/gatt/include/services/gatt
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/NimBLE_active_passive_scan
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/NimBLE_iBeacon
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/NimBLE_Server_Whitelist
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/NimBLE_Secure_Server
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/Bluetooth_5
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/Bluetooth_5/NimBLE_extended_client
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/Bluetooth_5/NimBLE_multi_advertiser
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/Bluetooth_5/NimBLE_extended_server
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/Bluetooth_5/NimBLE_extended_scan
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/NimBLE_Async_Client
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/BLE_Beacon_Scanner
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/NimBLE_Secure_Client
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/NimBLE_Scan_Whitelist
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/L2CAP
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/L2CAP/L2CAP_Server
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/L2CAP/L2CAP_Client
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/NimBLE_Scan_Continuous
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/BLE_EddystoneTLM_Beacon
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/NimBLE_Client
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/NimBLE-Arduino/examples/NimBLE_Server
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/ESP32S3_CAN
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/ESP32S3_CAN/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/OBD2
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/OBD2/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/OBD2/examples
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/OBD2/examples/OBD2_01_SupportedPIDs
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/OBD2/examples/OBD2_03_DataPrinter
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/OBD2/examples/OBD2_02_KeyStats
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/AsyncA7670
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/AsyncA7670/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/Update
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/Update/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/Update/examples
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/Update/examples/AWS_S3_OTA_Update
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/Update/examples/HTTPS_OTA_Update
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/lib/Update/examples/SD_Update
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/j1939
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/ble_devices
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/ble_devices/devices
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/gpio
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/utilities
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/network
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/definitions
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/rgbled
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/fota
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/gnss
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/blackbox
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/obd2
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/messaging
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/modbus
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/serial_comm
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/confiot_ble
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/global_objects
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/sensors
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/arducam
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/startup
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/1wire
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/layrz_protocol
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/settings
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/src/modules/zigbee
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/data
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/boards
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/test
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/legacy_reference/PowerCommand_modbus_map_to_json
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/7d
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/d8
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/52
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/7f
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/80
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/2d
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/fc
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/28
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/5d
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/e9
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/32
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/a4
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/26
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/d5
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/a5
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/98
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/23
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/86
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/cf
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/33
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/ae
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/1e
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/c0
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/ed
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/c4
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/44
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/0a
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/02
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/e6
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/01
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/70
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/3f
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/67
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/27
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/f8
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/b3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/0b
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/1b
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/69
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/5c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/6a
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/b1
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/f7
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/63
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/6d
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/ec
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/12
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/97
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/f4
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/9e
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/cc
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/9c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/c7
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/47
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/50
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/ee
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/54
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/72
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/c6
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/74
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/af
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/7c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/7e
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/77
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/2e
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/b5
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/ef
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/00
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/71
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/36
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/17
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/1f
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/dc
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/91
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/9a
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/03
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/f0
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/5f
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/1a
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/4c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/15
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/ce
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/46
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/4b
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/29
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/df
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/ba
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/dd
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/18
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/42
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/bc
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/e1
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/85
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/a8
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/2c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/d6
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/99
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/05
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/5a
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/22
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/0f
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/90
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/41
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/75
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/30
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/e5
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/4f
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/8a
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/aa
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/f5
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/25
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/8d
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/ac
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/34
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/ad
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/e8
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/fb
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/59
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/f2
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/cd
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/11
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/6f
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/ab
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/info
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/73
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/24
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/b9
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/87
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/2f
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/13
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/55
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/64
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/84
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/ff
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/09
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/b4
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/a3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/48
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/be
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/f6
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/8c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/4e
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/1d
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/1c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/a0
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/57
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/d4
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/82
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/94
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/fe
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/06
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/39
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/0c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/83
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/53
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/b6
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/db
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/0e
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/95
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/bd
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/79
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/04
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/3d
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/b7
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/38
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/93
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/8e
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/d1
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/7a
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/3b
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/68
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/88
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/65
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/56
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/f1
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/f9
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/78
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/08
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/20
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/da
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/16
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/92
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/bb
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/45
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/6c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/2a
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/b0
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/81
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/fd
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/c5
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/ea
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/5b
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/2b
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/0d
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/6e
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/3e
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/eb
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/40
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/5e
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/58
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/c9
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/a2
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/ca
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/cb
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/bf
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/e0
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/a1
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/fa
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/51
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/b2
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/e4
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/d9
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/c8
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/31
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/de
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/e3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/d3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/c3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/62
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/96
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/19
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/43
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/8b
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/e7
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/89
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/9d
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/f3
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/d2
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/21
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/d0
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/14
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/3a
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/76
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/37
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/c1
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/9f
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/c2
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/3c
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/a9
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/a7
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/6b
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/e2
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/8f
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/4a
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/66
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/b8
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/4d
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/61
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/d7
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/pack
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/7b
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/35
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/07
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/49
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/10
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/9b
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/a6
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/objects/60
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/info
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/branches
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/logs
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/logs/refs
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/logs/refs/remotes
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/logs/refs/remotes/origin
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/logs/refs/heads
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/refs
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/refs/remotes
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/refs/remotes/origin
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/refs/heads
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/refs/tags
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/hooks
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/.git/gk
+Searching INPUT for files to process...
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/components
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/components/blackbox
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/components/pool
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/components/pool/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/components/parser
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/components/parser/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/components/message_bus
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/components/crc16
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/components/crc16/include
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/components/crc
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/components/crc/include
+Searching for files in directory /home/panchove/Projecwarning: Specified markdown mainpage 'README.md' has not been defined as input file
+ts/LHOS-AEGIS-360/main
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/tests
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/docs
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/docs/templates
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/docs/iso12207
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/docs/iso12207/SDP.3_interface_specs
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/docs/doxygen
+Searching for files in directory /home/panchove/Projects/LHOS-AEGIS-360/docs/diagrams
+Reading and parsing tag files
+Parsing files
+Preprocessing /home/panchove/Projects/LHOS-AEGIS-360/components/crc/crc16.cpp...
+Parsing file /home/panchove/Projects/LHOS-AEGIS-360/components/crc/crc16.cpp...
+Preprocessing /home/panchove/Projects/LHOS-AEGIS-360/components/crc/include/crc16.hpp...
+Parsing file /home/panchove/Projects/LHOS-AEGIS-360/components/crc/include/crc16.hpp...
+Preprocessing /home/panchove/Projects/LHOS-AEGIS-360/components/crc16/crc16.cpp...
+Parsing file /home/panchove/Projects/LHOS-AEGIS-360/components/crc16/crc16.cpp...
+Preprocessing /home/panchove/Projects/LHOS-AEGIS-360/components/crc16/include/crc16.hpp...
+Parsing file /home/panchove/Projects/LHOS-AEGIS-360/components/crc16/include/crc16.hpp...
+Preprocessing /home/panchove/Projects/LHOS-AEGIS-360/components/parser/include/parser.hpp...
+Parsing file /home/panchove/Projects/LHOS-AEGIS-360/components/parser/include/parser.hpp...
+Preprocessing /home/panchove/Projects/LHOS-AEGIS-360/components/parser/parser.cpp...
+Parsing file /home/panchove/Projects/LHOS-AEGIS-360/components/parser/parser.cpp...
+Preprocessing /home/panchove/Projects/LHOS-AEGIS-360/components/pool/include/pool.hpp...
+Parsing file /home/panchove/Projects/LHOS-AEGIS-360/components/pool/include/pool.hpp...
+Preprocessing /home/panchove/Projects/LHOS-AEGIS-360/components/pool/pool.cpp...
+Parsing file /home/panchove/Projects/LHOS-AEGIS-360/components/pool/pool.cpp...
+Preprocessing /home/panchove/Projects/LHOS-AEGIS-360/main/main.cpp...
+Parsing file /home/panchove/Projects/LHOS-AEGIS-360/main/main.cpp...
+Preprocessing /home/panchove/Projects/LHOS-AEGIS-360/tests/test_crc16.cpp...
+Parsing file /home/panchove/Projects/LHOS-AEGIS-360/tests/test_crc16.cpp...
+Reading /home/panchove/Projects/LHOS-AEGIS-360/docs/INDEX.md...
+Reading /home/panchove/Projects/LHOS-AEGIS-360/docs/iso12207/SDP.1_requirements.md...
+Reading /home/panchove/Projects/LHOS-AEGIS-360/docs/iso12207/SDP.2_architecture.md...
+Reading /home/panchove/Projects/LHOS-AEGIS-360/docs/iso12207/SDP.3_interface_specs/CRC16_API.md...
+Reading /home/panchove/Projects/LHOS-AEGIS-360/docs/iso12207/SDP.3_interface_specs/PARSER_API.md...
+Reading /home/panchove/Projects/LHOS-AEGIS-360/docs/iso12207/SDP.3_interface_specs/POOL_API.md...
+Reading /home/panchove/Projects/LHOS-AEGIS-360/docs/templates/iso12207_template.md...
+Building macro definition list...
+Building group list...
+Building directory list...
+Building namespace list...
+Building file list...
+Building class list...
+Building concept list...
+Computing nesting relations for classes...
+Associating documentation with classes...
+Associating documentation with concepts...
+Associating documentation with modules...
+Building example list...
+Searching for enumerations...
+Searching for documented typedefs...
+Searching for members imported via using declarations...
+Searching for included using directives...
+Searching for documented variables...
+Building interface member list...
+Building member list...
+Searching for friends...
+Searching for documented defines...
+Computing class inheritance relations...
+Computing class usage relations...
+Flushing cached template relations that have become invalid...
+Computing class relations...
+Add enum values to enums...
+Searching for member function documentation...
+Creating members for template instances...
+Building page list...
+Search for main page...
+Computing page relations...
+Determining the scope of groups...
+Computing module relations...
+Sorting lists...
+Determining which enums are documented
+Computing member relations...
+Building full member lists recursively...
+Adding members to member groups.
+Computing member references...
+Inheriting documentation...
+Generating disk names...
+Adding source references...
+Adding xrefitems...
+Sorting member lists...
+Setting anonymous enum type...
+Computing dependencies between directories...
+Generating citations page...
+Counting members...
+Counting data structures...
+Resolving user defined references...
+Finding anchors and sections in the documentation...
+Transferring function references...
+Combining using relations...
+Adding members to index pages...
+Correcting members for VHDL...
+Computing tooltip texts...
+Generating style sheet...
+Generating search indices...
+Generating example documentation...
+Generating file sources...
+Generating code for file components/crc/crc16.cpp...
+Generating code for file components/crc16/crc16.cpp...
+Generating code for file components/crc/include/crc16.hpp...
+Generating code for file components/crc16/include/crc16.hpp...
+Generating code for file components/parser/include/parser.hpp...
+Generating code for file components/parser/parser.cpp...
+Generating code for file components/pool/include/pool.hpp...
+Generating code for file components/pool/pool.cpp...
+Parsing code for file docs/INDEX.md...
+Parsing code for file docs/iso12207/SDP.1_requirements.md...
+Parsing code for file docs/iso12207/SDP.2_architecture.md...
+Parsing code for file docs/iso12207/SDP.3_interface_specs/CRC16_API.md...
+Parsing code for file docs/iso12207/SDP.3_interface_specs/PARSER_API.md...
+Parsing code for file docs/iso12207/SDP.3_interface_specs/POOL_API.md...
+Parsing code for file docs/templates/iso12207_template.md...
+Generating code for file main/main.cpp...
+Generating code for file tests/test_crc16.cpp...
+Generating file documentation...
+Generating docs for file components/crc/crc16.cpp...
+Generating docs for file components/crc16/crc16.cpp...
+Generating docs for file components/crc/include/crc16.hpp...
+Generating docs for file components/crc16/include/crc16.hpp...
+Generating docs for file components/parser/include/parser.hpp...
+Generating docs for file components/parser/parser.cpp...
+Generating docs for file components/pool/include/pool.hpp...
+Generating docs for file components/pool/pool.cpp...
+Generating docs for file docs/INDEX.md...
+Generating docs for file docs/iso12207/SDP.1_requirements.md...
+Generating docs for file docs/iso12207/SDP.2_architecture.md...
+Generating docs for file docs/iso12207/SDP.3_interface_specs/CRC16_API.md...
+Generating docs for file docs/iso12207/SDP.3_interface_specs/PARSER_API.md...
+Generating docs for file docs/iso12207/SDP.3_interface_specs/POOL_API.md...
+Generating docs for file docs/templates/iso12207_template.md...
+Generating docs for file main/main.cpp...
+Generating docs for file tests/test_crc16.cpp...
+Generating page documentation...
+Generating docs for page md_docs_2INDEX...
+Generating group documentation...
+Generating class documentation...
+Generating concept documentation...
+Generating module documentation...
+Generating namespace documentation...
+Generating docs for namespace aegis
+Generating docs for compound aegis::PacketParser...
+Generating docs for compound aegis::PacketPool...
+Generating docs for nested compound aegis::PacketPool::Slot...
+Generating docs for compound aegis::pool_buf_t...
+Generating docs for namespace aegis::crc16
+Generating docs for namespace crc16
+Generating graph info page...
+Generating directory documentation...
+Generating dependency graph for directory components
+Generating dependency graph for directory components/crc
+Generating dependency graph for directory components/crc16
+Generating dependency graph for directory components/crc/include
+Generating dependency graph for directory components/crc16/include
+Generating dependency graph for directory components/parser/include
+Generating dependency graph for directory components/pool/include
+Generating dependency graph for directory docs/iso12207
+Generating dependency graph for directory main
+Generating dependency graph for directory components/parser
+Generating dependency graph for directory components/pool
+Generating dependency graph for directory docs/iso12207/SDP.3_interface_specs
+Generating dependency graph for directory docs/templates
+Generating index page...
+Generating page index...
+Generating topic index...
+Generating module index...
+Generating module member index...
+Generating namespace index...
+Generating namespace member index...
+Generating concept index...
+Generating annotated compound index...
+Generating alphabetical compound index...
+Generating hierarchical class index...
+Generating graphical class hierarchy...
+Generating member index...
+Generating file index...
+Generating file member index...
+Generating example index...
+finalizing index lists...
+writing tag file...
+Running plantuml with JAVA...
+Running dot...
+Generating dot graphs using 4 parallel threads...
+Running dot for graph 1/53
+Running dot for graph 2/53
+Running dot for graph 3/53
+Running dot for graph 4/53
+Running dot for graph 5/53
+Running dot for graph 6/53
+Running dot for graph 7/53
+Running dot for graph 8/53
+Running dot for graph 9/53
+Running dot for graph 10/53
+Running dot for graph 11/53
+Running dot for graph 12/53
+Running dot for graph 13/53
+Running dot for graph 14/53
+Running dot for graph 15/53
+Running dot for graph 16/53
+Running dot for graph 17/53
+Running dot for graph 18/53
+Running dot for graph 19/53
+Running dot for graph 20/53
+Running dot for graph 21/53
+Running dot for graph 22/53
+Running dot for graph 23/53
+Running dot for graph 24/53
+Running dot for graph 25/53
+Running dot for graph 26/53
+Running dot for graph 27/53
+Running dot for graph 28/53
+Running dot for graph 29/53
+Running dot for graph 30/53
+Running dot for graph 31/53
+Running dot for graph 32/53
+Running dot for graph 33/53
+Running dot for graph 34/53
+Running dot for graph 35/53
+Running dot for graph 36/53
+Running dot for graph 37/53
+Running dot for graph 38/53
+Running dot for graph 39/53
+Running dot for graph 40/53
+Running dot for graph 41/53
+Running dot for graph 42/53
+Running dot for graph 43/53
+Running dot for graph 44/53
+Running dot for graph 45/53
+Running dot for graph 46/53
+Running dot for graph 47/53
+Running dot for graph 48/53
+Running dot for graph 49/53
+Running dot for graph 50/53
+Running dot for graph 51/53
+Running dot for graph 52/53
+Running dot for graph 53/53
+Patching output file 1/75
+Patching output file 2/75
+Patching output file 3/75
+Patching output file 4/75
+Patching output file 5/75
+Patching output file 6/75
+Patching output file 7/75
+Patching output file 8/75
+Patching output file 9/75
+Patching output file 10/75
+Patching output file 11/75
+Patching output file 12/75
+Patching output file 13/75
+Patching output file 14/75
+Patching output file 15/75
+Patching output file 16/75
+Patching output file 17/75
+Patching output file 18/75
+Patching output file 19/75
+Patching output file 20/75
+Patching output file 21/75
+Patching output file 22/75
+Patching output file 23/75
+Patching output file 24/75
+Patching output file 25/75
+Patching output file 26/75
+Patching output file 27/75
+Patching output file 28/75
+Patching output file 29/75
+Patching output file 30/75
+Patching output file 31/75
+Patching output file 32/75
+Patching output file 33/75
+Patching output file 34/75
+Patching output file 35/75
+Patching output file 36/75
+Patching output file 37/75
+Patching output file 38/75
+Patching output file 39/75
+Patching output file 40/75
+Patching output file 41/75
+Patching output file 42/75
+Patching output file 43/75
+Patching output file 44/75
+Patching output file 45/75
+Patching output file 46/75
+Patching output file 47/75
+Patching output file 48/75
+Patching output file 49/75
+Patching output file 50/75
+Patching output file 51/75
+Patching output file 52/75
+Patching output file 53/75
+Patching output file 54/75
+Patching output file 55/75
+Patching output file 56/75
+Patching output file 57/75
+Patching output file 58/75
+Patching output file 59/75
+Patching output file 60/75
+Patching output file 61/75
+Patching output file 62/75
+Patching output file 63/75
+Patching output file 64/75
+Patching output file 65/75
+Patching output file 66/75
+Patching output file 67/75
+Patching output file 68/75
+Patching output file 69/75
+Patching output file 70/75
+Patching output file 71/75
+Patching output file 72/75
+Patching output file 73/75
+Patching output file 74/75
+Patching output file 75/75
+type lookup cache used 158/65536 hits=739 misses=299
+symbol lookup cache used 122/65536 hits=693 misses=122
+finished...

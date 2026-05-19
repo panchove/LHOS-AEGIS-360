@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "ESP-IDF",
+            "compilerPath": "/home/panchove/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20251107/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x86",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+            "includePath": [
+                "${workspaceFolder}/components/**/include",
+                "${workspaceFolder}/main",
+                "${workspaceFolder}/build/config",
+                "/home/panchove/esp/esp-idf-v5.5.3/components/**/include",
+                "/home/panchove/esp/esp-idf-v5.5.3/components/freertos/**/include",
+                "/home/panchove/esp/esp-idf-v5.5.3/components/esp_rom/include"
+            ],
+            "defines": [
+                "ESP32S3",
+                "IDF_VER=5.5.3"
+            ]
+        }
+    ],
+    "version": 4
+}

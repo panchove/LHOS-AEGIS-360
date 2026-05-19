@@ -1,0 +1,45 @@
+\doxysection{components/pool/pool.cpp File Reference}
+\hypertarget{pool_8cpp}{}\label{pool_8cpp}\index{components/pool/pool.cpp@{components/pool/pool.cpp}}
+{\ttfamily \#include "{}pool.\+hpp"{}}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$new$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include "{}esp\+\_\+heap\+\_\+caps.\+h"{}}\newline
+Include dependency graph for pool.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pool_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{pool_8cpp_a1e865c62651ebe03e70239b1ddd72c87}{AEGIS\+\_\+\+MALLOC}}(sz)~heap\+\_\+caps\+\_\+malloc((sz), MALLOC\+\_\+\+CAP\+\_\+\+SPIRAM \texorpdfstring{$\vert$}{|} MALLOC\+\_\+\+CAP\+\_\+8\+BIT)
+\item 
+\#define \mbox{\hyperlink{pool_8cpp_a2770ff4342eb484dcac0664332e7eb6a}{AEGIS\+\_\+\+FREE}}(ptr)~heap\+\_\+caps\+\_\+free(ptr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{pool_8cpp_a2770ff4342eb484dcac0664332e7eb6a}\label{pool_8cpp_a2770ff4342eb484dcac0664332e7eb6a} 
+\index{pool.cpp@{pool.cpp}!AEGIS\_FREE@{AEGIS\_FREE}}
+\index{AEGIS\_FREE@{AEGIS\_FREE}!pool.cpp@{pool.cpp}}
+\doxysubsubsection{\texorpdfstring{AEGIS\_FREE}{AEGIS\_FREE}}
+{\footnotesize\ttfamily \#define AEGIS\+\_\+\+FREE(\begin{DoxyParamCaption}\item[{}]{ptr }\end{DoxyParamCaption})~heap\+\_\+caps\+\_\+free(ptr)}
+
+
+
+Definition at line \mbox{\hyperlink{pool_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{pool_8cpp_source}{pool.\+cpp}}.
+
+\Hypertarget{pool_8cpp_a1e865c62651ebe03e70239b1ddd72c87}\label{pool_8cpp_a1e865c62651ebe03e70239b1ddd72c87} 
+\index{pool.cpp@{pool.cpp}!AEGIS\_MALLOC@{AEGIS\_MALLOC}}
+\index{AEGIS\_MALLOC@{AEGIS\_MALLOC}!pool.cpp@{pool.cpp}}
+\doxysubsubsection{\texorpdfstring{AEGIS\_MALLOC}{AEGIS\_MALLOC}}
+{\footnotesize\ttfamily \#define AEGIS\+\_\+\+MALLOC(\begin{DoxyParamCaption}\item[{}]{sz }\end{DoxyParamCaption})~heap\+\_\+caps\+\_\+malloc((sz), MALLOC\+\_\+\+CAP\+\_\+\+SPIRAM \texorpdfstring{$\vert$}{|} MALLOC\+\_\+\+CAP\+\_\+8\+BIT)}
+
+
+
+Definition at line \mbox{\hyperlink{pool_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{pool_8cpp_source}{pool.\+cpp}}.
+

@@ -1,0 +1,17 @@
+<map id="components/parser/parser.cpp" name="components/parser/parser.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="171,5,390,31"/>
+<area shape="rect" id="Node000002" href="$parser_8hpp.html" title=" " alt="" coords="89,79,179,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="258,33,171,75,169,70,256,28"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="203,79,270,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="276,32,253,68,249,66,271,30"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="294,79,355,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="290,30,313,66,308,68,286,32"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="379,79,438,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="303,28,377,69,374,74,300,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,76,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="121,106,68,146,65,141,117,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="101,152,167,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="137,104,137,138,131,138,131,104"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="192,152,279,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="152,102,209,142,206,146,149,106"/>
+</map>

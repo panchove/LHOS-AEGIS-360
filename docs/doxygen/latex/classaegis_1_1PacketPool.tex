@@ -1,0 +1,189 @@
+\doxysection{aegis\+::Packet\+Pool Class Reference}
+\hypertarget{classaegis_1_1PacketPool}{}\label{classaegis_1_1PacketPool}\index{aegis::PacketPool@{aegis::PacketPool}}
+
+
+{\ttfamily \#include $<$pool.\+hpp$>$}
+
+
+
+Collaboration diagram for aegis\+::Packet\+Pool\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classaegis_1_1PacketPool__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaegis_1_1PacketPool_1_1Slot}{Slot}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaegis_1_1PacketPool_a4efd0359006ca045021cc1ae7cb9ffa7}{Packet\+Pool}} ()=default
+\item 
+\mbox{\hyperlink{classaegis_1_1PacketPool_acdc2445576e8e4c35b64b76def30e457}{\texorpdfstring{$\sim$}{\string~}\+Packet\+Pool}} ()
+\item 
+bool \mbox{\hyperlink{classaegis_1_1PacketPool_abfbcccd06da536073f7bb20f7de9ddc2}{init}} (void \texorpdfstring{$\ast$}{*}backing, size\+\_\+t count, size\+\_\+t buf\+\_\+size)
+\item 
+\mbox{\hyperlink{structaegis_1_1pool__buf__t}{pool\+\_\+buf\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classaegis_1_1PacketPool_af4f99cd52b92eb6a2ff807ea377d8f38}{alloc}} ()
+\item 
+void \mbox{\hyperlink{classaegis_1_1PacketPool_ae4d9eacd06876f14e945448e6ec316d5}{release}} (\mbox{\hyperlink{structaegis_1_1pool__buf__t}{pool\+\_\+buf\+\_\+t}} \texorpdfstring{$\ast$}{*}b)
+\item 
+size\+\_\+t \mbox{\hyperlink{classaegis_1_1PacketPool_a565929fa3576bbaa6c1db28ccd17759a}{free\+\_\+count}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classaegis_1_1PacketPool_af21dc4bb3021b2cb9efe45b0bdffd711}{total\+\_\+count}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structaegis_1_1PacketPool_1_1Slot}{Slot}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classaegis_1_1PacketPool_a4e6672db75be2a42a472c99d382c2f88}{slots\+\_\+}} = nullptr
+\item 
+size\+\_\+t \mbox{\hyperlink{classaegis_1_1PacketPool_ac5e5c2e7f47d1715a762af9f2921d7f7}{count\+\_\+}} = 0
+\item 
+size\+\_\+t \mbox{\hyperlink{classaegis_1_1PacketPool_a9ea8ee7a94dddacd3a01430a0ac2ef50}{buf\+\_\+size\+\_\+}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{pool_8hpp_source_l00013}{13}} of file \mbox{\hyperlink{pool_8hpp_source}{pool.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classaegis_1_1PacketPool_a4efd0359006ca045021cc1ae7cb9ffa7}\label{classaegis_1_1PacketPool_a4efd0359006ca045021cc1ae7cb9ffa7} 
+\index{aegis::PacketPool@{aegis::PacketPool}!PacketPool@{PacketPool}}
+\index{PacketPool@{PacketPool}!aegis::PacketPool@{aegis::PacketPool}}
+\doxysubsubsection{\texorpdfstring{PacketPool()}{PacketPool()}}
+{\footnotesize\ttfamily aegis\+::\+Packet\+Pool\+::\+Packet\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classaegis_1_1PacketPool_acdc2445576e8e4c35b64b76def30e457}\label{classaegis_1_1PacketPool_acdc2445576e8e4c35b64b76def30e457} 
+\index{aegis::PacketPool@{aegis::PacketPool}!````~PacketPool@{\texorpdfstring{$\sim$}{\string~}PacketPool}}
+\index{````~PacketPool@{\texorpdfstring{$\sim$}{\string~}PacketPool}!aegis::PacketPool@{aegis::PacketPool}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PacketPool()}{\string~PacketPool()}}
+{\footnotesize\ttfamily Packet\+Pool\+::\texorpdfstring{$\sim$}{\string~}\+Packet\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pool_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{pool_8cpp_source}{pool.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{pool_8cpp_source_l00009}{AEGIS\+\_\+\+FREE}}, \mbox{\hyperlink{pool_8hpp_source_l00033}{count\+\_\+}}, and \mbox{\hyperlink{pool_8hpp_source_l00032}{slots\+\_\+}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classaegis_1_1PacketPool_af4f99cd52b92eb6a2ff807ea377d8f38}\label{classaegis_1_1PacketPool_af4f99cd52b92eb6a2ff807ea377d8f38} 
+\index{aegis::PacketPool@{aegis::PacketPool}!alloc@{alloc}}
+\index{alloc@{alloc}!aegis::PacketPool@{aegis::PacketPool}}
+\doxysubsubsection{\texorpdfstring{alloc()}{alloc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structaegis_1_1pool__buf__t}{pool\+\_\+buf\+\_\+t}} \texorpdfstring{$\ast$}{*} Packet\+Pool\+::alloc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pool_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{pool_8cpp_source}{pool.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{pool_8hpp_source_l00033}{count\+\_\+}}, \mbox{\hyperlink{pool_8hpp_source_l00009}{aegis\+::pool\+\_\+buf\+\_\+t\+::data}}, \mbox{\hyperlink{pool_8hpp_source_l00027}{aegis\+::\+Packet\+Pool\+::\+Slot\+::data}}, \mbox{\hyperlink{pool_8hpp_source_l00010}{aegis\+::pool\+\_\+buf\+\_\+t\+::len}}, \mbox{\hyperlink{pool_8hpp_source_l00029}{aegis\+::\+Packet\+Pool\+::\+Slot\+::size}}, and \mbox{\hyperlink{pool_8hpp_source_l00032}{slots\+\_\+}}.
+
+\Hypertarget{classaegis_1_1PacketPool_a565929fa3576bbaa6c1db28ccd17759a}\label{classaegis_1_1PacketPool_a565929fa3576bbaa6c1db28ccd17759a} 
+\index{aegis::PacketPool@{aegis::PacketPool}!free\_count@{free\_count}}
+\index{free\_count@{free\_count}!aegis::PacketPool@{aegis::PacketPool}}
+\doxysubsubsection{\texorpdfstring{free\_count()}{free\_count()}}
+{\footnotesize\ttfamily size\+\_\+t Packet\+Pool\+::free\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{pool_8cpp_source_l00086}{86}} of file \mbox{\hyperlink{pool_8cpp_source}{pool.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{pool_8hpp_source_l00033}{count\+\_\+}}, and \mbox{\hyperlink{pool_8hpp_source_l00032}{slots\+\_\+}}.
+
+\Hypertarget{classaegis_1_1PacketPool_abfbcccd06da536073f7bb20f7de9ddc2}\label{classaegis_1_1PacketPool_abfbcccd06da536073f7bb20f7de9ddc2} 
+\index{aegis::PacketPool@{aegis::PacketPool}!init@{init}}
+\index{init@{init}!aegis::PacketPool@{aegis::PacketPool}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Packet\+Pool\+::init (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{backing,  }\item[{size\+\_\+t}]{count,  }\item[{size\+\_\+t}]{buf\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pool_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{pool_8cpp_source}{pool.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{pool_8cpp_source_l00009}{AEGIS\+\_\+\+FREE}}, \mbox{\hyperlink{pool_8cpp_source_l00008}{AEGIS\+\_\+\+MALLOC}}, \mbox{\hyperlink{pool_8hpp_source_l00034}{buf\+\_\+size\+\_\+}}, \mbox{\hyperlink{pool_8hpp_source_l00033}{count\+\_\+}}, \mbox{\hyperlink{pool_8hpp_source_l00027}{aegis\+::\+Packet\+Pool\+::\+Slot\+::data}}, \mbox{\hyperlink{pool_8hpp_source_l00029}{aegis\+::\+Packet\+Pool\+::\+Slot\+::size}}, \mbox{\hyperlink{pool_8hpp_source_l00032}{slots\+\_\+}}, and \mbox{\hyperlink{pool_8hpp_source_l00028}{aegis\+::\+Packet\+Pool\+::\+Slot\+::used}}.
+
+\Hypertarget{classaegis_1_1PacketPool_ae4d9eacd06876f14e945448e6ec316d5}\label{classaegis_1_1PacketPool_ae4d9eacd06876f14e945448e6ec316d5} 
+\index{aegis::PacketPool@{aegis::PacketPool}!release@{release}}
+\index{release@{release}!aegis::PacketPool@{aegis::PacketPool}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily void Packet\+Pool\+::release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structaegis_1_1pool__buf__t}{pool\+\_\+buf\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pool_8cpp_source_l00074}{74}} of file \mbox{\hyperlink{pool_8cpp_source}{pool.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{pool_8hpp_source_l00033}{count\+\_\+}}, \mbox{\hyperlink{pool_8hpp_source_l00009}{aegis\+::pool\+\_\+buf\+\_\+t\+::data}}, and \mbox{\hyperlink{pool_8hpp_source_l00032}{slots\+\_\+}}.
+
+\Hypertarget{classaegis_1_1PacketPool_af21dc4bb3021b2cb9efe45b0bdffd711}\label{classaegis_1_1PacketPool_af21dc4bb3021b2cb9efe45b0bdffd711} 
+\index{aegis::PacketPool@{aegis::PacketPool}!total\_count@{total\_count}}
+\index{total\_count@{total\_count}!aegis::PacketPool@{aegis::PacketPool}}
+\doxysubsubsection{\texorpdfstring{total\_count()}{total\_count()}}
+{\footnotesize\ttfamily size\+\_\+t Packet\+Pool\+::total\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{pool_8cpp_source_l00093}{93}} of file \mbox{\hyperlink{pool_8cpp_source}{pool.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{pool_8hpp_source_l00033}{count\+\_\+}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classaegis_1_1PacketPool_a9ea8ee7a94dddacd3a01430a0ac2ef50}\label{classaegis_1_1PacketPool_a9ea8ee7a94dddacd3a01430a0ac2ef50} 
+\index{aegis::PacketPool@{aegis::PacketPool}!buf\_size\_@{buf\_size\_}}
+\index{buf\_size\_@{buf\_size\_}!aegis::PacketPool@{aegis::PacketPool}}
+\doxysubsubsection{\texorpdfstring{buf\_size\_}{buf\_size\_}}
+{\footnotesize\ttfamily size\+\_\+t aegis\+::\+Packet\+Pool\+::buf\+\_\+size\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{pool_8hpp_source_l00034}{34}} of file \mbox{\hyperlink{pool_8hpp_source}{pool.\+hpp}}.
+
+\Hypertarget{classaegis_1_1PacketPool_ac5e5c2e7f47d1715a762af9f2921d7f7}\label{classaegis_1_1PacketPool_ac5e5c2e7f47d1715a762af9f2921d7f7} 
+\index{aegis::PacketPool@{aegis::PacketPool}!count\_@{count\_}}
+\index{count\_@{count\_}!aegis::PacketPool@{aegis::PacketPool}}
+\doxysubsubsection{\texorpdfstring{count\_}{count\_}}
+{\footnotesize\ttfamily size\+\_\+t aegis\+::\+Packet\+Pool\+::count\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{pool_8hpp_source_l00033}{33}} of file \mbox{\hyperlink{pool_8hpp_source}{pool.\+hpp}}.
+
+\Hypertarget{classaegis_1_1PacketPool_a4e6672db75be2a42a472c99d382c2f88}\label{classaegis_1_1PacketPool_a4e6672db75be2a42a472c99d382c2f88} 
+\index{aegis::PacketPool@{aegis::PacketPool}!slots\_@{slots\_}}
+\index{slots\_@{slots\_}!aegis::PacketPool@{aegis::PacketPool}}
+\doxysubsubsection{\texorpdfstring{slots\_}{slots\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structaegis_1_1PacketPool_1_1Slot}{Slot}}\texorpdfstring{$\ast$}{*} aegis\+::\+Packet\+Pool\+::slots\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{pool_8hpp_source_l00032}{32}} of file \mbox{\hyperlink{pool_8hpp_source}{pool.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+components/pool/include/\mbox{\hyperlink{pool_8hpp}{pool.\+hpp}}\item 
+components/pool/\mbox{\hyperlink{pool_8cpp}{pool.\+cpp}}\end{DoxyCompactItemize}

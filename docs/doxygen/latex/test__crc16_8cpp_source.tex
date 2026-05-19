@@ -1,0 +1,28 @@
+\doxysection{test\+\_\+crc16.\+cpp}
+\hypertarget{test__crc16_8cpp_source}{}\label{test__crc16_8cpp_source}\index{tests/test\_crc16.cpp@{tests/test\_crc16.cpp}}
+\mbox{\hyperlink{test__crc16_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}unity.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}crc16.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00004}\mbox{\hyperlink{test__crc16_8cpp_a95c834d6178047ce9e1bce7cbfea2836}{00004}}\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{test__crc16_8cpp_a95c834d6178047ce9e1bce7cbfea2836}{setUp}}(\textcolor{keywordtype}{void})\ \{\}}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00005}\mbox{\hyperlink{test__crc16_8cpp_a9909011e5fea0c018842eec4d93d0662}{00005}}\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{test__crc16_8cpp_a9909011e5fea0c018842eec4d93d0662}{tearDown}}(\textcolor{keywordtype}{void})\ \{\}}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00007}\mbox{\hyperlink{test__crc16_8cpp_a4b2b5af14f8ebec10628d5d2e1c68335}{00007}}\ \mbox{\hyperlink{test__crc16_8cpp_a4b2b5af14f8ebec10628d5d2e1c68335}{TEST\_CASE}}(\textcolor{stringliteral}{"{}CRC16-\/CCITT\ known\ vector"{}},\ \textcolor{stringliteral}{"{}[crc16]"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ data[]\ =\ \textcolor{stringliteral}{"{}123456789"{}};}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00009}00009\ \ \ \ \ uint16\_t\ crc\ =\ \mbox{\hyperlink{namespacecrc16_a7e7522c1a05f7412fd2b15283cd78afa}{crc16::ccitt\_false}}(data,\ 9);}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00010}00010\ \ \ \ \ TEST\_ASSERT\_EQUAL\_HEX16(0x29B1,\ crc);}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00011}00011\ \}}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00013}\mbox{\hyperlink{test__crc16_8cpp_a0c4d579f9efd7bfbf93788ba813941ed}{00013}}\ \mbox{\hyperlink{test__crc16_8cpp_a4b2b5af14f8ebec10628d5d2e1c68335}{TEST\_CASE}}(\textcolor{stringliteral}{"{}CRC16\ to\ hex"{}},\ \textcolor{stringliteral}{"{}[crc16]"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordtype}{char}\ hex[5];}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{namespacecrc16_a797e90d4e1e169fe343bf699d80397dd}{crc16::to\_hex}}(0x29B1,\ hex);}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00016}00016\ \ \ \ \ TEST\_ASSERT\_EQUAL\_STRING(\textcolor{stringliteral}{"{}29B1"{}},\ hex);}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00017}00017\ \}}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00019}\mbox{\hyperlink{test__crc16_8cpp_acfd0ff5f750305ce84e99f1f5109eb95}{00019}}\ \mbox{\hyperlink{test__crc16_8cpp_a4b2b5af14f8ebec10628d5d2e1c68335}{TEST\_CASE}}(\textcolor{stringliteral}{"{}CRC16\ empty\ data"{}},\ \textcolor{stringliteral}{"{}[crc16]"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00020}00020\ \ \ \ \ uint16\_t\ crc\ =\ \mbox{\hyperlink{namespacecrc16_a7e7522c1a05f7412fd2b15283cd78afa}{crc16::ccitt\_false}}(\textcolor{keyword}{nullptr},\ 0);}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00021}00021\ \ \ \ \ TEST\_ASSERT\_EQUAL\_HEX16(0xFFFF,\ crc);}
+\DoxyCodeLine{\Hypertarget{test__crc16_8cpp_source_l00022}00022\ \}}
+
+\end{DoxyCode}

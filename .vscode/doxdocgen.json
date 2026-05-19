@@ -1,0 +1,30 @@
+{
+    "doxdocgen.generic.authorName": "THOR (Developer IA)",
+    "doxdocgen.generic.authorEmail": "thor@aegis.local",
+    "doxdocgen.generic.company": "LHOS-AEGIS-360",
+    "doxdocgen.generic.dateFormat": "YYYY-MM-DD",
+    "doxdocgen.generic.order": [
+        "brief",
+        "author",
+        "date",
+        "param",
+        "tparam",
+        "return",
+        "note",
+        "warning"
+    ],
+    "doxdocgen.c.triggerSequence": "/**",
+    "doxdocgen.cpp.triggerSequence": "/**",
+    "doxdocgen.commentStyle": "///",
+    "doxdocgen.c.firstLine": "/**",
+    "doxdocgen.c.commentPrefix": " * ",
+    "doxdocgen.c.lastLine": " */",
+    "doxdocgen.cpp.firstLine": "///",
+    "doxdocgen.cpp.commentPrefix": "///",
+    "doxdocgen.cpp.lastLine": "///",
+    "doxdocgen.file.fileTemplate": "@file {name}",
+    "doxdocgen.file.copyrightTag": [
+        "@copyright LHOS-AEGIS-360 Confidential"
+    ],
+    "doxdocgen.file.versionTag": "@version 0.1.0"
+}

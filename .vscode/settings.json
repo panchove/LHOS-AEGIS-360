@@ -1,0 +1,126 @@
+{
+  // Disable cSpell (workspace scope)
+  "cSpell.enabled": false,
+  // Ensure editor spell checking is off for files
+  "cSpell.enableFiletypes": {
+    "*": false
+  }
+}
+{
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.renderWhitespace": "boundary",
+    "editor.rulers": [100, 120],
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.cStandard": "c11",
+    "C_Cpp.clang_format_style": "{ BasedOnStyle: 'LLVM', IndentWidth: 2, UseTab: Never, ColumnLimit: 100, AlignAfterOpenBracket: Align, AlignConsecutiveAssignments: true, AlignConsecutiveDeclarations: true, AllowShortFunctionsOnASingleLine: None, AllowShortIfStatementsOnASingleLine: false, BreakBeforeBraces: Allman, PointerAlignment: Left, SpaceAfterCStyleCast: true, SpaceBeforeParens: ControlStatements }",
+    "C_Cpp.formatting": "clangFormat",
+    "C_Cpp.intelliSenseEngine": "default",
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.autoAddFileAssociations": false,
+    "files.associations": {
+        "*.hpp": "cpp",
+        "*.h": "c",
+        "*.cpp": "cpp",
+        "*.c": "c",
+        "*.md": "markdown",
+        "*.yml": "yaml",
+        "*.yaml": "yaml"
+    },
+    "markdownlint.config": {
+        "MD001": true,
+        "MD002": false,
+        "MD003": { "style": "atx" },
+        "MD004": { "style": "dash" },
+        "MD007": { "indent": 2 },
+        "MD009": false,
+        "MD010": false,
+        "MD011": true,
+        "MD012": true,
+        "MD013": false,
+        "MD014": false,
+        "MD018": true,
+        "MD019": true,
+        "MD020": true,
+        "MD021": true,
+        "MD022": { "lines_above": 1, "lines_below": 1 },
+        "MD023": true,
+        "MD024": false,
+        "MD025": false,
+        "MD026": { "punctuation": ".,;:!。，；：！" },
+        "MD027": true,
+        "MD028": true,
+        "MD029": { "style": "one_or_ordered" },
+        "MD030": { "ul_single": 1, "ol_single": 1, "ul_multi": 1, "ol_multi": 1 },
+        "MD031": { "list_items": true },
+        "MD032": true,
+        "MD033": false,
+        "MD034": true,
+        "MD035": { "style": "---" },
+        "MD036": { "punctuation": ".:;!?。：；！？" },
+        "MD037": true,
+        "MD038": true,
+        "MD039": true,
+        "MD040": true,
+        "MD041": false,
+        "MD042": true,
+        "MD043": false,
+        "MD044": false,
+        "MD045": true,
+        "MD046": { "style": "fenced" },
+        "MD047": true,
+        "MD048": true,
+    },
+    "markdown-preview-enhanced.breakOnSingleNewLine": false,
+    "markdown-preview-enhanced.mermaidTheme": "default",
+    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+    "[cpp]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[c]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[hpp]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[h]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[markdown]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "[json]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true
+    },
+    "[yaml]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true
+    },
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "editor.minimap.enabled": false,
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#ff000044"
+    },
+    "idf.currentSetup": "/home/panchove/esp/esp-idf-v5.5.3"
+}

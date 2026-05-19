@@ -1,0 +1,43 @@
+\doxysection{pool.\+hpp}
+\hypertarget{pool_8hpp_source}{}\label{pool_8hpp_source}\index{components/pool/include/pool.hpp@{components/pool/include/pool.hpp}}
+\mbox{\hyperlink{pool_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00001}00001\ \textcolor{comment}{//\ Minimal\ PacketPool\ API}}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceaegis}{aegis}}\ \{}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00008}\mbox{\hyperlink{structaegis_1_1pool__buf__t}{00008}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structaegis_1_1pool__buf__t}{pool\_buf\_t}}\ \{}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00009}\mbox{\hyperlink{structaegis_1_1pool__buf__t_a830c4431911a04debc35bfb825002443}{00009}}\ \ \ \ \ uint8\_t*\ \mbox{\hyperlink{structaegis_1_1pool__buf__t_a830c4431911a04debc35bfb825002443}{data}};}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00010}\mbox{\hyperlink{structaegis_1_1pool__buf__t_a555daed2ecd875ccd7ef938c2f457887}{00010}}\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structaegis_1_1pool__buf__t_a555daed2ecd875ccd7ef938c2f457887}{len}};}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00011}00011\ \};}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00013}\mbox{\hyperlink{classaegis_1_1PacketPool}{00013}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classaegis_1_1PacketPool}{PacketPool}}\ \{}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00014}00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00015}\mbox{\hyperlink{classaegis_1_1PacketPool_a4efd0359006ca045021cc1ae7cb9ffa7}{00015}}\ \ \ \ \ \mbox{\hyperlink{classaegis_1_1PacketPool_a4efd0359006ca045021cc1ae7cb9ffa7}{PacketPool}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{classaegis_1_1PacketPool_acdc2445576e8e4c35b64b76def30e457}{\string~PacketPool}}();}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00018}00018\ \ \ \ \ \textcolor{comment}{//\ backing\ is\ optional;\ if\ nullptr,\ pool\ will\ allocate\ internally\ (PSRAM\ when\ available)}}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classaegis_1_1PacketPool_abfbcccd06da536073f7bb20f7de9ddc2}{init}}(\textcolor{keywordtype}{void}*\ backing,\ \textcolor{keywordtype}{size\_t}\ count,\ \textcolor{keywordtype}{size\_t}\ buf\_size);}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{structaegis_1_1pool__buf__t}{pool\_buf\_t}}*\ \mbox{\hyperlink{classaegis_1_1PacketPool_af4f99cd52b92eb6a2ff807ea377d8f38}{alloc}}();}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaegis_1_1PacketPool_ae4d9eacd06876f14e945448e6ec316d5}{release}}(\mbox{\hyperlink{structaegis_1_1pool__buf__t}{pool\_buf\_t}}*\ b);}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classaegis_1_1PacketPool_a565929fa3576bbaa6c1db28ccd17759a}{free\_count}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classaegis_1_1PacketPool_af21dc4bb3021b2cb9efe45b0bdffd711}{total\_count}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00025}00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00026}\mbox{\hyperlink{structaegis_1_1PacketPool_1_1Slot}{00026}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structaegis_1_1PacketPool_1_1Slot}{Slot}}\ \{}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00027}\mbox{\hyperlink{structaegis_1_1PacketPool_1_1Slot_ab81edb97e69eea540f1630bfcad6cda4}{00027}}\ \ \ \ \ \ \ \ \ uint8\_t*\ \mbox{\hyperlink{structaegis_1_1PacketPool_1_1Slot_ab81edb97e69eea540f1630bfcad6cda4}{data}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00028}\mbox{\hyperlink{structaegis_1_1PacketPool_1_1Slot_aaf76205d13d55c7b4e173af145059691}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structaegis_1_1PacketPool_1_1Slot_aaf76205d13d55c7b4e173af145059691}{used}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00029}\mbox{\hyperlink{structaegis_1_1PacketPool_1_1Slot_a783c0f7dbb066a0bb6ff7aafac2d8ee5}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structaegis_1_1PacketPool_1_1Slot_a783c0f7dbb066a0bb6ff7aafac2d8ee5}{size}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00030}00030\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00032}\mbox{\hyperlink{classaegis_1_1PacketPool_a4e6672db75be2a42a472c99d382c2f88}{00032}}\ \ \ \ \ \mbox{\hyperlink{structaegis_1_1PacketPool_1_1Slot}{Slot}}*\ \mbox{\hyperlink{classaegis_1_1PacketPool_a4e6672db75be2a42a472c99d382c2f88}{slots\_}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00033}\mbox{\hyperlink{classaegis_1_1PacketPool_ac5e5c2e7f47d1715a762af9f2921d7f7}{00033}}\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classaegis_1_1PacketPool_ac5e5c2e7f47d1715a762af9f2921d7f7}{count\_}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00034}\mbox{\hyperlink{classaegis_1_1PacketPool_a9ea8ee7a94dddacd3a01430a0ac2ef50}{00034}}\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classaegis_1_1PacketPool_a9ea8ee7a94dddacd3a01430a0ac2ef50}{buf\_size\_}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00035}00035\ \};}
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{pool_8hpp_source_l00037}00037\ \}\ \textcolor{comment}{//\ namespace\ aegis}}
+
+\end{DoxyCode}
