@@ -1,85 +1,93 @@
 #include "pool.hpp"
 #include <cstdlib>
 #include <new>
+#include <atomic>
 
-PacketPool& PacketPool::instance() {
-    static PacketPool p;
-    return p;
-}
+#ifdef ESP_PLATFORM
+#include "esp_heap_caps.h"
+#define AEGIS_MALLOC(sz) heap_caps_malloc((sz), MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT)
+#define AEGIS_FREE(ptr) heap_caps_free(ptr)
+#else
+#define AEGIS_MALLOC(sz) malloc(sz)
+#define AEGIS_FREE(ptr) free(ptr)
+#endif
 
-PacketPool::~PacketPool() {
-    if (owned_ && slots_) {
-        for (size_t i = 0; i < num_buffers_; ++i) {
-            free(slots_[i].buffer);
+using namespace aegis;
+
+PacketPool::~PacketPool()
+{
+    if (slots_) {
+        for (size_t i = 0; i < count_; ++i) {
+            if (slots_[i].data) AEGIS_FREE(slots_[i].data);
         }
-        free(slots_);
+        AEGIS_FREE(slots_);
+        slots_ = nullptr;
     }
 }
 
-bool PacketPool::init(void* external_buffer, size_t num_buffers, size_t buffer_size) {
-    if (slots_) return false; // already inited
-    num_buffers_ = num_buffers;
-    buffer_size_ = buffer_size;
-    slots_ = static_cast<Slot*>(calloc(num_buffers_, sizeof(Slot)));
+bool PacketPool::init(void* backing, size_t count, size_t buf_size)
+{
+    if (count == 0 || buf_size == 0) return false;
+    count_ = count;
+    buf_size_ = buf_size;
+
+    // allocate slot array in normal RAM (small)
+    slots_ = static_cast<Slot*>(AEGIS_MALLOC(sizeof(Slot) * count_));
     if (!slots_) return false;
-    owned_ = true;
-    for (size_t i = 0; i < num_buffers_; ++i) {
-        slots_[i].buffer = static_cast<uint8_t*>(malloc(buffer_size_));
-        slots_[i].used.store(false);
-        slots_[i].magic = 0x0;
-        if (!slots_[i].buffer) return false;
-        free_count_.fetch_add(1);
+    // placement-new each slot
+    for (size_t i = 0; i < count_; ++i) {
+        slots_[i].data = static_cast<uint8_t*>(AEGIS_MALLOC(buf_size_));
+        if (!slots_[i].data) {
+            // cleanup
+            for (size_t j = 0; j < i; ++j) AEGIS_FREE(slots_[j].data);
+            AEGIS_FREE(slots_);
+            slots_ = nullptr;
+            return false;
+        }
+        slots_[i].size = buf_size_;
+        slots_[i].used = false;
     }
     return true;
 }
 
-pool_buf_t* PacketPool::alloc() {
-    for (size_t i = 0; i < num_buffers_; ++i) {
+pool_buf_t* PacketPool::alloc()
+{
+    for (size_t i = 0; i < count_; ++i) {
         bool expected = false;
-        if (slots_[i].used.compare_exchange_strong(expected, true)) {
-            slots_[i].magic = 0xDEADBEEF;
-            alloc_count_.fetch_add(1);
-            free_count_.fetch_sub(1);
-            pool_buf_t* b = static_cast<pool_buf_t*>(malloc(sizeof(pool_buf_t)));
-            if (!b) return nullptr;
-            b->data = slots_[i].buffer;
-            b->len = 0;
-            b->magic = slots_[i].magic;
-            return b;
+        // simple atomic check via __atomic builtins
+        if (!slots_[i].used) {
+            // try to claim
+            if (__atomic_compare_exchange_n(&slots_[i].used, &expected, true, false, __ATOMIC_SEQ_CST, __ATOMIC_SEQ_CST)) {
+                // return view
+                pool_buf_t* b = reinterpret_cast<pool_buf_t*>(slots_[i].data); // temporary alias
+                // create a small meta struct on stack
+                static thread_local pool_buf_t meta;
+                meta.data = slots_[i].data;
+                meta.len = slots_[i].size;
+                return &meta;
+            }
         }
     }
     return nullptr;
 }
 
-void PacketPool::release(pool_buf_t* buf) {
-    if (!buf) return;
-    // find slot by pointer
-    for (size_t i = 0; i < num_buffers_; ++i) {
-        if (slots_[i].buffer == buf->data) {
-            if (!slots_[i].used.load()) {
-                // double free
-                return;
-            }
-            slots_[i].used.store(false);
-            slots_[i].magic = 0x0;
-            free_count_.fetch_add(1);
-            alloc_count_.fetch_sub(1);
-            free(buf);
+void PacketPool::release(pool_buf_t* b)
+{
+    if (!b) return;
+    uint8_t* ptr = b->data;
+    for (size_t i = 0; i < count_; ++i) {
+        if (slots_[i].data == ptr) {
+            __atomic_store_n(&slots_[i].used, false, __ATOMIC_SEQ_CST);
             return;
         }
     }
-    // not found: free struct
-    free(buf);
 }
 
-size_t PacketPool::free_count() const { return free_count_.load(); }
-size_t PacketPool::total_count() const { return num_buffers_; }
-size_t PacketPool::alloc_count() const { return alloc_count_.load(); }
-size_t PacketPool::leak_count() const { return alloc_count_.load(); }
-bool PacketPool::is_valid(const pool_buf_t* buf) const {
-    if (!buf) return false;
-    for (size_t i = 0; i < num_buffers_; ++i) {
-        if (slots_[i].buffer == buf->data) return slots_[i].magic == 0xDEADBEEF;
-    }
-    return false;
+size_t PacketPool::free_count() const
+{
+    size_t freec = 0;
+    for (size_t i = 0; i < count_; ++i) if (!slots_[i].used) ++freec;
+    return freec;
 }
+
+size_t PacketPool::total_count() const { return count_; }

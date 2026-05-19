@@ -1,5 +1,3 @@
-idf_component_register(
-    INCLUDE_DIRS "include"
-    SRCS "parser.cpp"
-    REQUIRES crc16 pool
-)
+set(COMPONENT_SRCS "parser.cpp")
+set(COMPONENT_ADD_INCLUDEDIRS "include")
+register_component()

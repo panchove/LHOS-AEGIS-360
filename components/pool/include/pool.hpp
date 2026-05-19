@@ -1,46 +1,37 @@
+// Minimal PacketPool API
 #pragma once
-#include <cstdint>
 #include <cstddef>
-#include <atomic>
+#include <cstdint>
+
+namespace aegis {
 
 struct pool_buf_t {
     uint8_t* data;
     size_t len;
-    uint32_t magic;  // 0xDEADBEEF if valid
 };
 
 class PacketPool {
 public:
-    static PacketPool& instance();
-    bool init(void* external_buffer = nullptr,
-              size_t num_buffers = 16,
-              size_t buffer_size = 512);
-    pool_buf_t* alloc();
-    void release(pool_buf_t* buf);
-    size_t free_count() const;
-    size_t total_count() const;
-    size_t alloc_count() const;
-    size_t leak_count() const;
-    bool is_valid(const pool_buf_t* buf) const;
-
-private:
     PacketPool() = default;
     ~PacketPool();
-    PacketPool(const PacketPool&) = delete;
-    PacketPool& operator=(const PacketPool&) = delete;
 
+    // backing is optional; if nullptr, pool will allocate internally (PSRAM when available)
+    bool init(void* backing, size_t count, size_t buf_size);
+    pool_buf_t* alloc();
+    void release(pool_buf_t* b);
+    size_t free_count() const;
+    size_t total_count() const;
+
+private:
     struct Slot {
-        uint8_t* buffer;
-        std::atomic<bool> used;
-        uint32_t magic;
+        uint8_t* data = nullptr;
+        bool used = false;
+        size_t size = 0;
     };
 
-    Slot* slots_{nullptr};
-    size_t num_buffers_{0};
-    size_t buffer_size_{0};
-    std::atomic<size_t> alloc_count_{0};
-    std::atomic<size_t> free_count_{0};
-    bool use_psram_{false};
-    bool owned_{false};
-    void* psram_ptr_{nullptr};
+    Slot* slots_ = nullptr;
+    size_t count_ = 0;
+    size_t buf_size_ = 0;
 };
+
+} // namespace aegis
