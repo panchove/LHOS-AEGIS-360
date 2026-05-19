@@ -1,0 +1,23 @@
+# Build output
+build/
+
+# VS Code
+.vscode/
+
+# IDF cache
+sdkconfig
+sdkconfig.old
+
+# Temporary files
+*.pyc
+*.o
+*.elf
+*.map
+*.bin
+*.log
+
+# Local environment
+.env
+
+# MacOS
+.DS_Store
