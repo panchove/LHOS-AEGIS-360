@@ -1,0 +1,57 @@
+classDiagram
+    class PacketPool {
+        +instance() PacketPool&
+        +init() bool
+        +alloc() optional~pool_buf_t~
+        +release(pool_buf_t&&)
+        +free_count() size_t
+        -slots_ Slot*
+        -num_buffers_ size_t
+    }
+    
+    class PacketParser {
+        +init(callback) bool
+        +feed(bytes, len)
+        +check_timeout()
+        +reset()
+        -state_ ParserState
+        -current_buf_ pool_buf_t*
+    }
+    
+    class MessageBus {
+        +instance() MessageBus&
+        +publish(buf, priority) bool
+        +consume(priority) optional~pool_buf_t~
+        +enqueue_to_blackbox(buf)
+        -rt_queue_ QueueHandle_t
+        -ri_queue_ QueueHandle_t
+    }
+    
+    class BlackBox {
+        +instance() BlackBox&
+        +append(buf) bool
+        +read_next() optional~pool_buf_t~
+        +commit_current() bool
+        -file_ FILE*
+    }
+    
+    class LTEModem {
+        +instance() LTEModem&
+        +connect(host, port) bool
+        +send(data, len) bool
+        +at_command(cmd) string
+        -uart_ uart_port_t
+    }
+    
+    class CommandDispatcher {
+        +instance() CommandDispatcher&
+        +dispatch(command) string
+        +register_handler(cmd, handler)
+        -handlers_ map
+    }
+    
+    PacketParser --> PacketPool : uses
+    MessageBus --> PacketPool : uses
+    MessageBus --> BlackBox : persists
+    LTEModem --> MessageBus : consumes
+    CommandDispatcher --> LTEModem : receives commands from

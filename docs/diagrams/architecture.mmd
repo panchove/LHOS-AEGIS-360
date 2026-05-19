@@ -1,0 +1,56 @@
+graph TB
+    subgraph "Hardware"
+        HW[ESP32-S3 + SIMCom A7670]
+    end
+    
+    subgraph "HAL (C/ISR)"
+        UART[UART Driver]
+        SPI[SPI Driver]
+        I2C[I2C Driver]
+        GPIO[GPIO Driver]
+    end
+    
+    subgraph "Core Services (C++17 Heapless)"
+        POOL[PacketPool<br/>PSRAM Buffer Pool]
+        CRC[CRC16<br/>ROM Wrapper]
+        PARSER[PacketParser<br/>FSM]
+        BUS[MessageBus<br/>RT/RI Queues]
+        BB[BlackBox<br/>LittleFS]
+    end
+    
+    subgraph "Domain Services"
+        LTE[LTE Modem<br/>SIMCom A7670]
+        BLE[BLE Scanner<br/>NimBLE Native]
+        MODBUS[Modbus RTU<br/>RS485]
+        GNSS[GNSS<br/>NMEA Parser]
+    end
+    
+    subgraph "Application"
+        CMD[Command Dispatcher<br/>Layrz Protocol]
+        HEALTH[Health Monitor<br/>Watchdog]
+        SAFE[Safe Mode<br/>Degraded Ops]
+    end
+    
+    HW --> UART
+    HW --> SPI
+    HW --> I2C
+    HW --> GPIO
+    
+    UART --> PARSER
+    UART --> LTE
+    UART --> GNSS
+    SPI --> MODBUS
+    I2C --> BLE
+    
+    PARSER --> POOL
+    POOL --> BUS
+    BUS --> BB
+    BUS --> LTE
+    
+    LTE --> CMD
+    BLE --> BUS
+    MODBUS --> BUS
+    
+    CMD --> HEALTH
+    HEALTH --> SAFE
+    SAFE --> BUS

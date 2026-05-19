@@ -1,0 +1,27 @@
+graph LR
+    subgraph "Core 1 (Critical)"
+        PARSER[Parser Task<br/>Priority 5<br/>Stack 4KB]
+        BUS[MessageBus Task<br/>Priority 5<br/>Stack 4KB]
+        HEALTH[Health Task<br/>Priority 6<br/>Stack 2KB]
+    end
+    
+    subgraph "Core 0 (Services)"
+        LTE[LTE Task<br/>Priority 3<br/>Stack 8KB]
+        BLE[BLE Task<br/>Priority 3<br/>Stack 8KB]
+        MODBUS[Modbus Task<br/>Priority 2<br/>Stack 4KB]
+        CMD[Command Task<br/>Priority 3<br/>Stack 4KB]
+    end
+    
+    subgraph "Sincronización"
+        RTQ[RT Queue<br/>Real-time]
+        RIQ[RI Queue<br/>Retry/Blackbox]
+        EG[Event Group<br/>System Events]
+    end
+    
+    PARSER -->|publish| RTQ
+    PARSER -->|publish| RIQ
+    BUS -->|consume| RTQ
+    BUS -->|consume| RIQ
+    LTE -->|signal| EG
+    BLE -->|signal| EG
+    HEALTH -->|monitor| EG

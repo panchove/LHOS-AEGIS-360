@@ -1,0 +1,36 @@
+sequenceDiagram
+    participant ROM as ROM Bootloader
+    participant BOOT as Bootloader
+    participant APP as app_main()
+    participant POOL as PacketPool
+    participant BUS as MessageBus
+    participant BB as BlackBox
+    participant HEALTH as Health Monitor
+    participant TASKS as FreeRTOS Tasks
+    
+    ROM->>BOOT: Power On
+    BOOT->>APP: jump to app_main()
+    
+    APP->>POOL: init()
+    alt PSRAM disponible
+        POOL-->>APP: buffers en PSRAM
+    else PSRAM no disponible
+        POOL-->>APP: fallback a DRAM
+    end
+    
+    APP->>BB: init(LittleFS)
+    BB-->>APP: mount /blackbox
+    
+    APP->>BUS: init()
+    BUS-->>APP: RT/RI queues creadas
+    
+    APP->>HEALTH: init()
+    HEALTH-->>APP: task registry lista
+    
+    APP->>TASKS: xTaskCreateStatic()
+    TASKS-->>APP: Parser, LTE, BLE Tasks
+    
+    APP->>HEALTH: set_state(READY)
+    HEALTH-->>APP: System Ready
+    
+    Note over APP,TASKS: Sistema operativo normal

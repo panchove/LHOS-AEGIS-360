@@ -1,0 +1,19 @@
+stateDiagram-v2
+    [*] --> IDLE: Inicio/Reset
+    
+    IDLE --> SYNC: Recibe '<'
+    SYNC --> HEADER: Recibe 'P' o 'A'
+    HEADER --> BODY: Recibe '>' (cierre de tag)
+    BODY --> CRC: Recibe '<' (cierre de paquete)
+    CRC --> DISPATCH: CRC válido
+    CRC --> ERROR: CRC inválido
+    DISPATCH --> IDLE: Callback ejecutado
+    
+    ERROR --> RECOVERY: Limpiar estado
+    RECOVERY --> IDLE: Listo para próximo
+    
+    IDLE --> IDLE: timeout/reset
+    SYNC --> IDLE: timeout
+    HEADER --> IDLE: timeout
+    BODY --> IDLE: timeout
+    CRC --> IDLE: timeout

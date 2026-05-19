@@ -1,0 +1,32 @@
+sequenceDiagram
+    participant UART as UART RX
+    participant PARSER as PacketParser
+    participant POOL as PacketPool
+    participant BUS as MessageBus
+    participant LTE as LTE Modem
+    participant BB as BlackBox
+    
+    UART->>PARSER: feed_byte(bytes)
+    PARSER->>POOL: alloc()
+    POOL-->>PARSER: pool_buf_t*
+    
+    alt CRC Válido
+        PARSER->>BUS: publish(buf, priority)
+        BUS->>LTE: consume()
+        LTE-->>BUS: ACK del servidor
+        BUS->>POOL: release(buf)
+    else CRC Inválido
+        PARSER->>POOL: release(buf)
+        PARSER->>PARSER: crc_failures++
+    else Timeout
+        PARSER->>POOL: release(buf)
+        PARSER->>PARSER: timeouts++
+    else Red desconectada (Reliable Priority)
+        BUS->>BB: append(buf)
+        BB-->>BUS: persistido
+        Note over LTE: Cuando red disponible
+        LTE->>BB: read_next()
+        BB-->>LTE: pool_buf_t*
+        LTE->>LTE: send()
+        LTE->>BB: commit_current()
+    end

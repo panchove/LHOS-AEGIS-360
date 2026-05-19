@@ -1,0 +1,25 @@
+graph TB
+    subgraph "PSRAM (Externa, 8MB opcional)"
+        POOL_BUFFERS[Packet Pool Buffers<br/>16 x 512 bytes = 8KB]
+        BLE_CACHE[BLE Device Cache<br/>MAC → Last Packet]
+        CONFIG_JSON[Configuración JSON<br/>En runtime]
+    end
+    
+    subgraph "DRAM (Interna, 512KB + 512KB)"
+        STACKS[Task Stacks<br/>~30KB total]
+        HEAP[ESP-IDF Heap<br/>~200KB]
+        QUEUES[FreeRTOS Queues<br/>~4KB]
+        CONTROL[Control Structures<br/>Pool Slots, Stats]
+    end
+    
+    subgraph "IRAM (Cache, 64KB)"
+        ISR[ISR Routines<br/>UART, GPIO]
+        CRC_ROM[CRC16 ROM Function<br/>esp_rom_crc16_be]
+    end
+    
+    subgraph "Flash (8MB)"
+        CODE[Program Code<br/>C++17 Text]
+        LITTLFS[LittleFS Partition<br/>BlackBox, Config]
+    end
+    
+    POOL_BUFFERS -->|fallback if no PSRAM| HEAP
